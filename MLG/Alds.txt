@@ -1,0 +1,144 @@
+//fixed
+main,mainFunc funcList
+mainFunc,PRESS START { code }
+funcList,funcDec funcList
+funcList,
+
+code,code_segment code
+code,
+
+non_cond_code_segment,varDec !
+
+//fixed
+//non_cond_code_segment,arrDec !
+
+//code_segment,identifiers
+non_cond_code_segment,assignment !
+non_cond_code_segment,funcCall !
+non_cond_code_segment,loop
+non_cond_code_segment,fuckTheUniverse !
+non_cond_code_segment,!
+
+//did you forget this?
+code_segment,conditional
+code_segment,non_cond_code_segment
+
+varDec,dataType identifiers
+
+// int
+dataType,mmr
+// float
+dataType,kdr
+// char
+dataType,char
+// string
+dataType,SAMPLETEXT
+// boolean
+dataType,isMLG
+
+//fixed
+identifiers,IDENTIFIER &com; identifiers
+identifiers,assignment &com; identifiers
+identifiers,IDENTIFIER
+identifiers,assignment
+
+//fixed
+assignment,IDENTIFIER = expr
+assignment,IDENTIFIER = comparative
+assignment,IDENTIFIER = funcCall
+
+//fixed
+expr,expr + expr2
+expr,expr - expr2
+expr,expr2
+expr2,expr2 * expr3
+expr2,expr2 / expr3
+expr2,expr2 % expr3
+expr2,expr3
+expr3,( expr )
+expr3,expr4
+expr4,+ expr4
+expr4,- expr4
+expr4,expr5
+expr5,++ IDENTIFIER
+expr5,-- IDENTIFIER
+expr5,IDENTIFIER ++
+expr5,IDENTIFIER --
+expr5,literal
+expr5,literal2
+//expr5,( comparative )
+expr5,IDENTIFIER
+//expr5,IDENTIFIER arrIndex
+
+//changed
+literal,int
+literal2,float
+literal2,char
+literal2,string
+literal3,boolean
+
+funcDec,dataType IDENTIFIER ( funcParams ) { code }
+funcDec,dataType IDENTIFIER ( ) { code }
+
+funcParams,dataType IDENTIFIER &com; funcParams
+funcParams,dataType IDENTIFIER
+
+funcCall,IDENTIFIER ( funcCallParams )
+funcCall,print ( expr )
+funcCall,println ( expr )
+funcCall,println ( )
+
+//fixed
+funcCallParams,expr
+funcCallParams,expr &com; funcCallParams
+funcCallParams,
+
+//this is redundant IF expr can produce an IDENTIFIER
+//funcCallParams,IDENTIFIER
+//funcCallParams,IDENTIFIER &com; funcCallParams
+
+//fixed
+comparative,comparative AND comparative2
+comparative,comparative2
+comparative2,comparative2 OR comparative3
+comparative2,comparative3
+comparative3,NOT ( comparative3 )
+comparative3,literal3
+comparative3,NOT literal3
+comparative3,comparative4
+comparative4,expr < expr
+comparative4,expr <= expr
+comparative4,expr > expr
+comparative4,expr >= expr
+comparative4,expr == expr
+comparative4,expr != expr
+comparative4,( comparative )
+
+//fixed
+code_block,non_cond_code_segment
+code_block,{ code }
+
+conditional,IF comparative THEN code_block
+
+//is this what you meant for else?
+conditional,IF comparative THEN code_block ELSE conditional
+conditional,IF comparative THEN code_block ELSE code_block
+
+loop,whileLoop
+loop,doWhileLoop
+loop,forLoop
+whileLoop,WHILE ( comparative ) code_block
+doWhileLoop,DO code_block WHILE ( comparative ) !
+forLoop,FOR ( varDec ; comparative ; assignment ) code_block
+
+//fixed
+//arrDec,dataType arrIndex = arrAssignment !
+//arrIndex,[ expr ] arrIndex
+//arrIndex,[ expr ]
+
+//unresolvable conflict. Just check in SDT if expr ends up as an INT
+//arrDec,dataType [ expr ] = identifiers !
+//arrDec,dataType [ expr ] = arrAssignment !
+
+//arrAssignment,expr
+//arrAssignment,expr &com; arrAssignment
