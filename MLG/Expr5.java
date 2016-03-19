@@ -74,7 +74,7 @@ public class Expr5 extends NonTerminal {
 						break;
 					case "char":
 						put("type","char");
-						put("val",nt.getAsString("val").charAt(0));
+						put("val",nt.getAsString("val"));
 						break;
 					case "string":
 						put("type","string");
@@ -97,7 +97,7 @@ public class Expr5 extends NonTerminal {
 						break;
 					case "char":
 						put("type",v.type());
-						put("val",v.getAsString().charAt(0));
+						put("val",v.getAsString());
 						break;
 					case "string":
 						put("type",v.type());

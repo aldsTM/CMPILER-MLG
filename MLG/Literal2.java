@@ -5,6 +5,7 @@ public class Literal2 extends NonTerminal {
 
 	public void interpret() throws Exception {
 		Token t;
+		String str;
 		printBranch();
 		switch(getProdString()) {			
 			case "float":
@@ -15,16 +16,25 @@ public class Literal2 extends NonTerminal {
 				put("val",f);
 				break;
 			case "char":
-				t = (Token) getComponent("char");
+				t = (Token)getComponent("char");
 				printIndent(t.token());
-				char c = t.token().trim().charAt(0);
+				str = t.token();
+				str = str.substring(1,str.length() - 1)
+						.replaceAll("\\\\n","\n")
+						.replaceAll("\\\\t","\t")
+						.replaceAll("\\\\b","\b")
+						.replaceAll("\\\\r","\r")
+						.replaceAll("\\\\f","\f")
+						.replaceAll("\\\\\'","'")
+						.replaceAll("\\\\\"","\"")
+						.replaceAll("\\\\\\\\","\\");
 				put("type","char");
-				put("val",c);
+				put("val",str);
 				break;
 			case "string":
 				t = (Token) getComponent("string");
 				printIndent(t.token());
-				String str = t.token();
+				str = t.token();
 				str = str.substring(1,str.length() - 1)
 						.replaceAll("\\\\n","\n")
 						.replaceAll("\\\\t","\t")

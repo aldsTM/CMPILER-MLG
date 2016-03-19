@@ -102,6 +102,7 @@ public class Expr2 extends NonTerminal {
 					case "string":
 						switch(nt2.getAsString("type")){
 							case "int":
+							case "char":
 								put("type","string");
 								String str = "";
 								for(int i = 0; i < nt2.getAsInt("val"); i++ ) {
@@ -109,10 +110,10 @@ public class Expr2 extends NonTerminal {
 								}
 								put("val",str);
 								break;
-							case "char":
+							case "float":
 								put("type","string");
 								str = "";
-								for(int i = 0; i < nt2.getAsInt("val"); i++ ) {
+								for(int i = 0; i < nt2.getAsFloat("val"); i++ ) {
 									str += nt.getAsString("val");
 								}
 								put("val",str);
@@ -131,6 +132,7 @@ public class Expr2 extends NonTerminal {
 				nt.execute();
 				nt2 = (NonTerminal) getAsObject("line2");
 				nt2.execute();
+
 				switch(nt.getAsString("type")){
 					case "int":
 						switch(nt2.getAsString("type")){
@@ -221,7 +223,7 @@ public class Expr2 extends NonTerminal {
 						break;
 					case "char":
 						put("type","char");
-						put("val",nt.getAsString("val").charAt(0));
+						put("val",nt.getAsString("val"));
 						break;
 					case "string":
 						put("type","string");

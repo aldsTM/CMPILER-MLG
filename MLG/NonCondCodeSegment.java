@@ -70,7 +70,11 @@ public class NonCondCodeSegment extends NonTerminal {
 			f.setVisible(true);
 		} else {
 			nt = (NonTerminal) getAsObject("line");
-			nt.execute();
+			try {
+				nt.execute();
+			} catch (Exception e){
+				System.out.println(e.getMessage());
+			}
 		}
 	}
 }

@@ -45,7 +45,7 @@ public class Expr3 extends NonTerminal {
 						break;
 					case "char":
 						put("type","char");
-						put("val",nt.getAsString("val").charAt(0));
+						put("val",nt.getAsString("val"));
 						break;
 					case "string":
 						put("type","string");

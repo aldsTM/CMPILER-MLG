@@ -43,6 +43,7 @@ identifiers,IDENTIFIER
 identifiers,assignment
 
 //fixed
+assignment,IDENTIFIER = assignment
 assignment,IDENTIFIER = expr
 assignment,IDENTIFIER = comparative
 assignment,IDENTIFIER = funcCall

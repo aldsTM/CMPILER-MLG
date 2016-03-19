@@ -110,7 +110,7 @@ public class Expr extends NonTerminal {
 								break;
 							case "char":
 								put("type","string");
-								put("val",nt.getAsString("val").charAt(0) + nt2.getAsString("val").charAt(0));
+								put("val",nt.getAsString("val").charAt(0) + "" + nt2.getAsString("val").charAt(0));
 								break;
 							case "string":
 								put("type","string");
@@ -136,7 +136,7 @@ public class Expr extends NonTerminal {
 								break;
 							case "char":
 								put("type","string");
-								put("val",nt.getAsString("val") + nt2.getAsString("val").charAt(0));
+								put("val",nt.getAsString("val") + nt2.getAsString("val"));
 								break;
 							case "string":
 								put("type","string");
@@ -297,7 +297,7 @@ public class Expr extends NonTerminal {
 						break;
 					case "char":
 						put("type","char");
-						put("val",nt.getAsString("val").charAt(0));
+						put("val",nt.getAsString("val"));
 						break;
 					case "string":
 						put("type","string");
