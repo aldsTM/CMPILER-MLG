@@ -68,11 +68,11 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 			case "comparative4":
 				return new Comparative4(pattern);
 			case "code_block":
-				//return new code_block(pattern);
-				return null;
+				return new CodeBlock(pattern);
 			case "conditional":
-				//return new conditional(pattern);
-				return null;
+				return new Conditional(pattern);
+			case "m":
+				return new M(pattern);
 			case "loop":
 				//return new loop(pattern);
 				return null;

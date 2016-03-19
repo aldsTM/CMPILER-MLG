@@ -119,11 +119,14 @@ comparative4,( comparative )
 code_block,non_cond_code_segment
 code_block,{ code }
 
-conditional,IF comparative THEN code_block
+conditional,ILLUMINATI CONFIRMED ( comparative ) code_block
 
 //is this what you meant for else?
-conditional,IF comparative THEN code_block ELSE conditional
-conditional,IF comparative THEN code_block ELSE code_block
+conditional,ILLUMINATI CONFIRMED ( comparative ) code_block m WHATCHASAY conditional
+conditional,ILLUMINATI CONFIRMED ( comparative ) code_block m WHATCHASAY code_block
+
+m,M m
+m,
 
 loop,whileLoop
 loop,doWhileLoop

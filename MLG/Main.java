@@ -1,5 +1,6 @@
 public class Main extends NonTerminal {
 	private MainFunc main;
+	private FuncList funcList;
 
 	public Main(String pattern) {
 		super("main",pattern);
@@ -13,9 +14,13 @@ public class Main extends NonTerminal {
 		main = (MainFunc)getComponent("mainFunc");
 		propagate(main);
 		main.interpret();
+		funcList = (FuncList)getComponent("funcList");
+		propagate(funcList);
+		funcList.interpret();
 	}
 
 	public void execute() {
 		main.execute();
+		funcList.execute();
 	}
 }

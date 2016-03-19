@@ -100,23 +100,49 @@ public class Expr2 extends NonTerminal {
 						}
 						break;
 					case "string":
+						String str;
 						switch(nt2.getAsString("type")){
 							case "int":
-							case "char":
-								put("type","string");
-								String str = "";
-								for(int i = 0; i < nt2.getAsInt("val"); i++ ) {
-									str += nt.getAsString("val");
+								try{
+									int number = Integer.parseInt(nt.getAsString("val"));
+									put("val",number * nt2.getAsString("val").charAt(0));
+									put("type","int");
+								} catch (Exception e) {
+									put("type","string");
+									str = "";
+									for(int i = 0; i < nt2.getAsInt("val"); i++ ) {
+										str += nt.getAsString("val");
+									}
+									put("val",str);
 								}
-								put("val",str);
+								break;
+							case "char":
+								try{
+									int number = Integer.parseInt(nt.getAsString("val"));
+									put("val",number * nt2.getAsInt("val"));
+									put("type","int");
+								} catch (Exception e) {
+									put("type","string");
+									str = "";
+									for(int i = 0; i < nt2.getAsInt("val"); i++ ) {
+										str += nt.getAsString("val");
+									}
+									put("val",str);
+								}
 								break;
 							case "float":
-								put("type","string");
-								str = "";
-								for(int i = 0; i < nt2.getAsFloat("val"); i++ ) {
-									str += nt.getAsString("val");
+								try{
+									float number = Float.parseFloat(nt.getAsString("val"));
+									put("val",number * nt2.getAsFloat("val"));
+									put("type","float");
+								} catch (Exception e) {
+									put("type","string");
+									str = "";
+									for(int i = 0; i < nt2.getAsFloat("val"); i++ ) {
+										str += nt.getAsString("val");
+									}
+									put("val",str);
 								}
-								put("val",str);
 								break;
 							default:
 								error = true;

@@ -24,7 +24,7 @@ public class Driver {
 			Interpreter interpreter 
 				= new Interpreter(new ConcreteTokenizer()
 							,ConcreteNonTerminalFactory.instance(),code
-							,"Alds.txt",false);
+							,"Alds.txt",true);
 
 			pw = new PrintWriter(new FileWriter(new File("ParseTree.txt")));
 			interpreter.interpret();

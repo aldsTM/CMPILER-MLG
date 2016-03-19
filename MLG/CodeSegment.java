@@ -8,16 +8,18 @@ public class CodeSegment extends NonTerminal {
 	}
 
 	public void interpret() throws Exception {
-		NonCondCodeSegment code;
 		printBranch();
 		switch(getProdString()) {
 			case "conditional":
-				code = (NonCondCodeSegment) getComponent("conditional");
-				propagate(code);
-				code.interpret();
+				Conditional cond;
+				type = "conditional";
+				cond = (Conditional) getComponent("conditional");
+				propagate(cond);
+				cond.interpret();
 				put("line",getComponent("conditional"));
 				break;
 			case "non_cond_code_segment":
+				NonCondCodeSegment code;
 				code = (NonCondCodeSegment) getComponent("non_cond_code_segment");
 				propagate(code);
 				code.interpret();
@@ -40,7 +42,8 @@ public class CodeSegment extends NonTerminal {
 	}
 
 	public void execute() {
-		NonTerminal nt = (NonTerminal) getAsObject("line");
+		NonTerminal nt;
+		nt = (NonTerminal) getAsObject("line");
 		nt.execute();
 		//code.execute();
 	}

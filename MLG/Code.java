@@ -26,12 +26,17 @@ public class Code extends NonTerminal {
 				propagate(nt2);
 				nt2.interpret();
 
-				moreShit = nt2.getCodes();
+				//moreShit = (CodeSegment[]) nt2.getAsArray("lines");
+				moreShit = (CodeSegment[]) nt2.getCodes();
 				for(CodeSegment temp: moreShit) {
 					if (temp != null){
 						codeSegments.add(temp);
 					}
 				}
+				// CodeLine[] morecodes = (CodeLine[])code.getAsArray("lines");
+				// for(CodeLine temp: morecodes) {
+				// 	codes.add(temp);
+				// }
 				break;
 				
 				/* ArrayList<NonTerminal> subList 
@@ -44,6 +49,7 @@ public class Code extends NonTerminal {
 
 				break;
 		}
+		put("lines",this.getCodes());
 	}
 
 

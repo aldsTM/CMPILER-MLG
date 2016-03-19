@@ -9,527 +9,121 @@ main
         |- funcCall
           |- println
           |- (
+          |- expr
+            |- expr2
+              |- expr2
+                |- expr3
+                  |- expr4
+                    |- expr5
+                      |- literal
+                        |- 5
+              |- /
+              |- expr3
+                |- expr4
+                  |- expr5
+                    |- literal
+                      |- 0
           |- )
         |- !
     |- code
       |- code_segment
         |- non_cond_code_segment
-          |- funcCall
-            |- println
-            |- (
-            |- expr
-              |- expr2
-                |- expr3
-                  |- expr4
-                    |- expr5
-                      |- literal2
-                        |- "HEeheY HeheY if crazy = genius"
-            |- )
           |- !
       |- code
         |- code_segment
           |- non_cond_code_segment
-            |- funcCall
-              |- println
-              |- (
-              |- expr
-                |- expr
-                  |- expr
-                    |- expr
-                      |- expr2
-                        |- expr3
-                          |- expr4
-                            |- expr5
-                              |- literal2
-                                |- "Heyehey"
-                    |- +
-                    |- expr2
-                      |- expr3
-                        |- expr4
-                          |- expr5
-                            |- literal2
-                              |- "hehey if crazy.equals(GENIUS)"
-                  |- +
-                  |- expr2
-                    |- expr3
-                      |- expr4
-                        |- expr5
-                          |- literal2
-                            |- "THEN IMA FUCKING ARSONIST"
-                |- +
-                |- expr2
-                  |- expr3
-                    |- expr4
-                      |- expr5
-                        |- literal2
-                          |- "YEAH IMMA ROCKET SCIENTIST"
-              |- )
             |- !
         |- code
           |- code_segment
             |- non_cond_code_segment
-              |- funcCall
-                |- print
-                |- (
-                |- expr
-                  |- expr2
-                    |- expr3
-                      |- expr4
-                        |- expr5
-                          |- literal2
-                            |- "Heheyey"
-                |- )
               |- !
           |- code
             |- code_segment
               |- non_cond_code_segment
-                |- funcCall
-                  |- print
-                  |- (
-                  |- expr
-                    |- expr2
-                      |- expr3
-                        |- expr4
-                          |- expr5
-                            |- literal2
-                              |- "! Heyey! "
-                  |- )
                 |- !
             |- code
               |- code_segment
                 |- non_cond_code_segment
-                  |- funcCall
-                    |- println
-                    |- (
-                    |- expr
-                      |- expr2
-                        |- expr3
-                          |- expr4
-                            |- expr5
-                              |- literal2
-                                |- "IFcrazy==genius-HEY\n"
-                    |- )
                   |- !
               |- code
                 |- code_segment
                   |- non_cond_code_segment
-                    |- funcCall
-                      |- println
-                      |- (
-                      |- expr
-                        |- expr
-                          |- expr2
-                            |- expr3
-                              |- expr4
-                                |- expr5
-                                  |- literal
-                                    |- 1
-                        |- +
-                        |- expr2
-                          |- expr3
-                            |- expr4
-                              |- expr5
-                                |- literal
-                                  |- 1
-                      |- )
                     |- !
                 |- code
                   |- code_segment
                     |- non_cond_code_segment
-                      |- funcCall
-                        |- println
-                        |- (
-                        |- expr
-                          |- expr
-                            |- expr2
-                              |- expr3
-                                |- expr4
-                                  |- expr5
-                                    |- literal
-                                      |- 1
-                          |- +
-                          |- expr2
-                            |- expr2
-                              |- expr3
-                                |- expr4
-                                  |- expr5
-                                    |- literal
-                                      |- 2
-                            |- *
-                            |- expr3
-                              |- expr4
-                                |- expr5
-                                  |- literal
-                                    |- 3
-                        |- )
                       |- !
                   |- code
                     |- code_segment
                       |- non_cond_code_segment
-                        |- funcCall
-                          |- println
-                          |- (
-                          |- expr
-                            |- expr
-                              |- expr2
-                                |- expr3
-                                  |- expr4
-                                    |- expr5
-                                      |- literal
-                                        |- 2
-                            |- +
-                            |- expr2
-                              |- expr3
-                                |- expr4
-                                  |- expr5
-                                    |- literal
-                                      |- 3
-                          |- )
                         |- !
                     |- code
                       |- code_segment
                         |- non_cond_code_segment
-                          |- funcCall
-                            |- println
-                            |- (
-                            |- expr
-                              |- expr2
-                                |- expr3
-                                  |- expr4
-                                    |- expr5
-                                      |- literal2
-                                        |- "expr"
-                            |- )
                           |- !
                       |- code
                         |- code_segment
                           |- non_cond_code_segment
-                            |- funcCall
-                              |- println
-                              |- (
-                              |- expr
-                                |- expr
-                                  |- expr
-                                    |- expr2
-                                      |- expr3
-                                        |- expr4
-                                          |- expr5
-                                            |- literal2
-                                              |- "2 + 5 = "
-                                  |- +
-                                  |- expr2
-                                    |- expr3
-                                      |- expr4
-                                        |- expr5
-                                          |- literal
-                                            |- 2
-                                |- +
-                                |- expr2
-                                  |- expr3
-                                    |- expr4
-                                      |- expr5
-                                        |- literal
-                                          |- 5
-                              |- )
                             |- !
                         |- code
                           |- code_segment
                             |- non_cond_code_segment
-                              |- funcCall
-                                |- println
-                                |- (
-                                |- expr
-                                  |- expr
-                                    |- expr2
-                                      |- expr3
-                                        |- expr4
-                                          |- expr5
-                                            |- literal2
-                                              |- "2 + -5 = "
-                                  |- +
-                                  |- expr2
-                                    |- expr3
-                                      |- (
-                                      |- expr
-                                        |- expr
-                                          |- expr2
-                                            |- expr3
-                                              |- expr4
-                                                |- expr5
-                                                  |- literal
-                                                    |- 2
-                                        |- +
-                                        |- expr2
-                                          |- expr3
-                                            |- expr4
-                                              |- -
-                                              |- expr4
-                                                |- expr5
-                                                  |- literal
-                                                    |- 5
-                                      |- )
-                                |- )
                               |- !
                           |- code
                             |- code_segment
                               |- non_cond_code_segment
-                                |- varDec
-                                  |- dataType
-                                    |- kdr
-                                  |- identifiers
-                                    |- x
                                 |- !
                             |- code
                               |- code_segment
                                 |- non_cond_code_segment
-                                  |- funcCall
-                                    |- println
-                                    |- (
-                                    |- expr
-                                      |- expr2
-                                        |- expr3
-                                          |- expr4
-                                            |- expr5
-                                              |- literal2
-                                                |- "yay nadeclare na ang x"
-                                    |- )
                                   |- !
                               |- code
                                 |- code_segment
                                   |- non_cond_code_segment
-                                    |- assignment
-                                      |- x
-                                      |- =
-                                      |- expr
-                                        |- expr2
-                                          |- expr3
-                                            |- expr4
-                                              |- expr5
-                                                |- literal
-                                                  |- 5
                                     |- !
                                 |- code
                                   |- code_segment
                                     |- non_cond_code_segment
-                                      |- funcCall
-                                        |- println
-                                        |- (
-                                        |- expr
-                                          |- expr
-                                            |- expr2
-                                              |- expr3
-                                                |- expr4
-                                                  |- expr5
-                                                    |- literal2
-                                                      |- "x = "
-                                          |- +
-                                          |- expr2
-                                            |- expr3
-                                              |- expr4
-                                                |- expr5
-                                                  |- x
-                                        |- )
                                       |- !
                                   |- code
                                     |- code_segment
                                       |- non_cond_code_segment
-                                        |- varDec
-                                          |- dataType
-                                            |- mmr
-                                          |- identifiers
-                                            |- y
                                         |- !
                                     |- code
                                       |- code_segment
                                         |- non_cond_code_segment
-                                          |- funcCall
-                                            |- println
-                                            |- (
-                                            |- expr
-                                              |- expr2
-                                                |- expr3
-                                                  |- expr4
-                                                    |- expr5
-                                                      |- literal2
-                                                        |- "I'm gonna try to assign a FLOAT to an INTINIGGER"
-                                            |- )
                                           |- !
                                       |- code
                                         |- code_segment
                                           |- non_cond_code_segment
-                                            |- assignment
-                                              |- y
-                                              |- =
-                                              |- expr
-                                                |- expr2
-                                                  |- expr3
-                                                    |- expr4
-                                                      |- expr5
-                                                        |- literal2
-                                                          |- 8.5
                                             |- !
                                         |- code
                                           |- code_segment
                                             |- non_cond_code_segment
-                                              |- funcCall
-                                                |- println
-                                                |- (
-                                                |- expr
-                                                  |- expr
-                                                    |- expr
-                                                      |- expr2
-                                                        |- expr3
-                                                          |- expr4
-                                                            |- expr5
-                                                              |- literal2
-                                                                |- "y = "
-                                                    |- +
-                                                    |- expr2
-                                                      |- expr3
-                                                        |- expr4
-                                                          |- expr5
-                                                            |- y
-                                                  |- +
-                                                  |- expr2
-                                                    |- expr3
-                                                      |- expr4
-                                                        |- expr5
-                                                          |- literal2
-                                                            |- " OHDIBa I CAN DO tHAT OHHHHH YEAH #100"
-                                                |- )
                                               |- !
                                           |- code
                                             |- code_segment
                                               |- non_cond_code_segment
-                                                |- funcCall
-                                                  |- println
-                                                  |- (
-                                                  |- expr
-                                                    |- expr2
-                                                      |- expr3
-                                                        |- expr4
-                                                          |- expr5
-                                                            |- literal2
-                                                              |- "NOW STRING MINUS STRING OH SHIT"
-                                                  |- )
                                                 |- !
                                             |- code
                                               |- code_segment
                                                 |- non_cond_code_segment
-                                                  |- funcCall
-                                                    |- println
-                                                    |- (
-                                                    |- expr
-                                                      |- expr
-                                                        |- expr2
-                                                          |- expr3
-                                                            |- expr4
-                                                              |- expr5
-                                                                |- literal2
-                                                                  |- "FUCK EVERRRYTHING"
-                                                      |- -
-                                                      |- expr2
-                                                        |- expr3
-                                                          |- expr4
-                                                            |- expr5
-                                                              |- literal2
-                                                                |- "VER"
-                                                    |- )
                                                   |- !
                                               |- code
                                                 |- code_segment
                                                   |- non_cond_code_segment
-                                                    |- funcCall
-                                                      |- println
-                                                      |- (
-                                                      |- expr
-                                                        |- expr
-                                                          |- expr
-                                                            |- expr2
-                                                              |- expr3
-                                                                |- expr4
-                                                                  |- expr5
-                                                                    |- literal2
-                                                                      |- "I LOVE CMPILER"
-                                                          |- -
-                                                          |- expr2
-                                                            |- expr3
-                                                              |- expr4
-                                                                |- expr5
-                                                                  |- literal2
-                                                                    |- "CMPILER"
-                                                        |- +
-                                                        |- expr2
-                                                          |- expr3
-                                                            |- expr4
-                                                              |- expr5
-                                                                |- literal2
-                                                                  |- "SIR THOMAS TIAM-LEE"
-                                                      |- )
                                                     |- !
                                                 |- code
                                                   |- code_segment
                                                     |- non_cond_code_segment
-                                                      |- funcCall
-                                                        |- println
-                                                        |- (
-                                                        |- )
                                                       |- !
                                                   |- code
                                                     |- code_segment
                                                       |- non_cond_code_segment
-                                                        |- funcCall
-                                                          |- println
-                                                          |- (
-                                                          |- expr
-                                                            |- expr
-                                                              |- expr
-                                                                |- expr2
-                                                                  |- expr3
-                                                                    |- expr4
-                                                                      |- expr5
-                                                                        |- literal2
-                                                                          |- "CRUSH NI SYFU SI PEDRO"
-                                                              |- -
-                                                              |- expr2
-                                                                |- expr3
-                                                                  |- expr4
-                                                                    |- expr5
-                                                                      |- literal2
-                                                                        |- "PEDRO"
-                                                            |- +
-                                                            |- expr2
-                                                              |- expr2
-                                                                |- expr3
-                                                                  |- expr4
-                                                                    |- expr5
-                                                                      |- literal2
-                                                                        |- "BULOS"
-                                                              |- *
-                                                              |- expr3
-                                                                |- expr4
-                                                                  |- expr5
-                                                                    |- literal
-                                                                      |- 5
-                                                          |- )
                                                         |- !
                                                     |- code
                                                       |- code_segment
                                                         |- non_cond_code_segment
-                                                          |- varDec
-                                                            |- dataType
-                                                              |- mmr
-                                                            |- identifiers
-                                                              |- assignment
-                                                                |- koSaDota2
-                                                                |- =
-                                                                |- expr
-                                                                  |- expr2
-                                                                    |- expr3
-                                                                      |- expr4
-                                                                        |- expr5
-                                                                          |- literal
-                                                                            |- 9000
                                                           |- !
                                                       |- code
                                                         |- code_segment
@@ -538,261 +132,884 @@ main
                                                               |- println
                                                               |- (
                                                               |- expr
+                                                                |- expr
+                                                                  |- expr2
+                                                                    |- expr3
+                                                                      |- expr4
+                                                                        |- expr5
+                                                                          |- literal
+                                                                            |- 1
+                                                                |- +
                                                                 |- expr2
                                                                   |- expr3
                                                                     |- expr4
                                                                       |- expr5
-                                                                        |- koSaDota2
+                                                                        |- literal
+                                                                          |- 1
                                                               |- )
                                                             |- !
                                                         |- code
                                                           |- code_segment
                                                             |- non_cond_code_segment
-                                                              |- varDec
-                                                                |- dataType
-                                                                  |- SAMPLETEXT
-                                                                |- identifiers
-                                                                  |- blazeItNigga
                                                               |- !
                                                           |- code
                                                             |- code_segment
                                                               |- non_cond_code_segment
-                                                                |- assignment
-                                                                  |- blazeItNigga
-                                                                  |- =
-                                                                  |- expr
-                                                                    |- expr
-                                                                      |- expr
-                                                                        |- expr2
-                                                                          |- expr3
-                                                                            |- expr4
-                                                                              |- expr5
-                                                                                |- literal2
-                                                                                  |- "In 2013, the Angelo King Institute of Economic Business Studies partnered with the College of Computer Studies to develop a digital data collection, called the Community-Based Management System (CBMS). The data was collected digitally through mobile devices and a web portal. This is the dataset used in this Major Course Output (MCO).\n\n"
-                                                                      |- +
-                                                                      |- expr2
-                                                                        |- expr3
-                                                                          |- expr4
-                                                                            |- expr5
-                                                                              |- literal2
-                                                                                |- "The group developed a simple Java application that allows the user to extract data from the Palawan and Mindoro CBMS Dataset, such as the bio-profile of different household members, their educational attainment and work experience, their social indicators, and criminal or mortuary events. It goes into a very deep level of detail in some respects, such as social indicators or work status: it records, for example, the different kinds of technological devices in a particular household, the total aquatic animal catches per equipment, and PhilHealth beneficiaries. Depending on the type of SQL query performed on the database, even more detail can be derived about Palawan and/or Mindoro residents from this data. For example, the average amount of fish per type caught by region, the average number of OFWs per nuclear family, etc.\n\n"
-                                                                    |- +
-                                                                    |- expr2
-                                                                      |- expr3
-                                                                        |- expr4
-                                                                          |- expr5
-                                                                            |- literal2
-                                                                              |- "The goal of this project is for students to realize the impact of query structures to the performance of the application. Depending on the structure of the SQL query used, it should take longer or shorter to get results, and for this, a big database was needed, thus the need for CBMS. Also, via this project, we will realize the correlation between good database design and snappier performance. This reports the queries used by this group and the optimizations done to those queries in order to result in the best possible performance."
                                                                 |- !
                                                             |- code
                                                               |- code_segment
                                                                 |- non_cond_code_segment
-                                                                  |- funcCall
-                                                                    |- println
-                                                                    |- (
-                                                                    |- expr
-                                                                      |- expr2
-                                                                        |- expr3
-                                                                          |- expr4
-                                                                            |- expr5
-                                                                              |- blazeItNigga
-                                                                    |- )
                                                                   |- !
                                                               |- code
                                                                 |- code_segment
                                                                   |- non_cond_code_segment
-                                                                    |- varDec
-                                                                      |- dataType
-                                                                        |- SAMPLETEXT
-                                                                      |- identifiers
-                                                                        |- assignment
-                                                                          |- fourtwenty
-                                                                          |- =
-                                                                          |- expr
-                                                                            |- expr2
-                                                                              |- expr3
-                                                                                |- expr4
-                                                                                  |- expr5
-                                                                                    |- literal
-                                                                                      |- 420
                                                                     |- !
                                                                 |- code
                                                                   |- code_segment
                                                                     |- non_cond_code_segment
-                                                                      |- funcCall
-                                                                        |- println
-                                                                        |- (
-                                                                        |- expr
-                                                                          |- expr2
-                                                                            |- expr3
-                                                                              |- expr4
-                                                                                |- expr5
-                                                                                  |- fourtwenty
-                                                                        |- )
                                                                       |- !
                                                                   |- code
                                                                     |- code_segment
                                                                       |- non_cond_code_segment
-                                                                        |- assignment
-                                                                          |- fourtwenty
-                                                                          |- =
-                                                                          |- expr
-                                                                            |- expr2
-                                                                              |- expr3
-                                                                                |- expr4
-                                                                                  |- expr5
-                                                                                    |- literal2
-                                                                                      |- 420.0
                                                                         |- !
                                                                     |- code
                                                                       |- code_segment
                                                                         |- non_cond_code_segment
-                                                                          |- funcCall
-                                                                            |- println
-                                                                            |- (
-                                                                            |- expr
-                                                                              |- expr2
-                                                                                |- expr3
-                                                                                  |- expr4
-                                                                                    |- expr5
-                                                                                      |- fourtwenty
-                                                                            |- )
                                                                           |- !
                                                                       |- code
                                                                         |- code_segment
                                                                           |- non_cond_code_segment
-                                                                            |- assignment
-                                                                              |- fourtwenty
-                                                                              |- =
-                                                                              |- expr
-                                                                                |- expr2
-                                                                                  |- expr3
-                                                                                    |- expr4
-                                                                                      |- expr5
-                                                                                        |- fourtwenty
                                                                             |- !
                                                                         |- code
                                                                           |- code_segment
                                                                             |- non_cond_code_segment
-                                                                              |- funcCall
-                                                                                |- println
-                                                                                |- (
-                                                                                |- expr
-                                                                                  |- expr
-                                                                                    |- expr2
-                                                                                      |- expr3
-                                                                                        |- expr4
-                                                                                          |- expr5
-                                                                                            |- fourtwenty
-                                                                                  |- +
-                                                                                  |- expr2
-                                                                                    |- expr3
-                                                                                      |- expr4
-                                                                                        |- expr5
-                                                                                          |- literal2
-                                                                                            |- "BLAZEIT FAGGET"
-                                                                                |- )
                                                                               |- !
                                                                           |- code
                                                                             |- code_segment
                                                                               |- non_cond_code_segment
-                                                                                |- assignment
-                                                                                  |- fourtwenty
-                                                                                  |- =
-                                                                                  |- expr
-                                                                                    |- expr
-                                                                                      |- expr2
-                                                                                        |- expr2
-                                                                                          |- expr3
-                                                                                            |- expr4
-                                                                                              |- expr5
-                                                                                                |- fourtwenty
-                                                                                        |- *
-                                                                                        |- expr3
-                                                                                          |- expr4
-                                                                                            |- expr5
-                                                                                              |- x
-                                                                                    |- +
-                                                                                    |- expr2
-                                                                                      |- expr3
-                                                                                        |- expr4
-                                                                                          |- expr5
-                                                                                            |- y
                                                                                 |- !
                                                                             |- code
                                                                               |- code_segment
                                                                                 |- non_cond_code_segment
-                                                                                  |- funcCall
-                                                                                    |- println
-                                                                                    |- (
-                                                                                    |- expr
-                                                                                      |- expr
-                                                                                        |- expr2
-                                                                                          |- expr3
-                                                                                            |- expr4
-                                                                                              |- expr5
-                                                                                                |- fourtwenty
-                                                                                      |- +
-                                                                                      |- expr2
-                                                                                        |- expr3
-                                                                                          |- expr4
-                                                                                            |- expr5
-                                                                                              |- literal2
-                                                                                                |- "-- AWWWW di na sya fourtwenty ibang variable naman"
-                                                                                    |- )
                                                                                   |- !
                                                                               |- code
                                                                                 |- code_segment
                                                                                   |- non_cond_code_segment
-                                                                                    |- varDec
-                                                                                      |- dataType
-                                                                                        |- SAMPLETEXT
-                                                                                      |- identifiers
-                                                                                        |- str1
-                                                                                        |- ,
-                                                                                        |- identifiers
-                                                                                          |- str2
-                                                                                          |- ,
-                                                                                          |- identifiers
-                                                                                            |- assignment
-                                                                                              |- str3
-                                                                                              |- =
-                                                                                              |- expr
-                                                                                                |- expr2
-                                                                                                  |- expr3
-                                                                                                    |- expr4
-                                                                                                      |- expr5
-                                                                                                        |- literal2
-                                                                                                          |- "AWW YIS"
-                                                                                            |- ,
-                                                                                            |- identifiers
-                                                                                              |- str4
-                                                                                              |- ,
-                                                                                              |- identifiers
-                                                                                                |- assignment
-                                                                                                  |- str5
-                                                                                                  |- =
-                                                                                                  |- expr
-                                                                                                    |- expr2
-                                                                                                      |- expr3
-                                                                                                        |- expr4
-                                                                                                          |- expr5
-                                                                                                            |- literal2
-                                                                                                              |- "NaniSore?!?!"
                                                                                     |- !
                                                                                 |- code
                                                                                   |- code_segment
                                                                                     |- non_cond_code_segment
-                                                                                      |- funcCall
-                                                                                        |- println
-                                                                                        |- (
-                                                                                        |- expr
-                                                                                          |- expr2
-                                                                                            |- expr3
-                                                                                              |- expr4
-                                                                                                |- expr5
-                                                                                                  |- str5
-                                                                                        |- )
                                                                                       |- !
                                                                                   |- code
+                                                                                    |- code_segment
+                                                                                      |- non_cond_code_segment
+                                                                                        |- !
+                                                                                    |- code
+                                                                                      |- code_segment
+                                                                                        |- non_cond_code_segment
+                                                                                          |- !
+                                                                                      |- code
+                                                                                        |- code_segment
+                                                                                          |- non_cond_code_segment
+                                                                                            |- !
+                                                                                        |- code
+                                                                                          |- code_segment
+                                                                                            |- non_cond_code_segment
+                                                                                              |- !
+                                                                                          |- code
+                                                                                            |- code_segment
+                                                                                              |- non_cond_code_segment
+                                                                                                |- !
+                                                                                            |- code
+                                                                                              |- code_segment
+                                                                                                |- non_cond_code_segment
+                                                                                                  |- funcCall
+                                                                                                    |- println
+                                                                                                    |- (
+                                                                                                    |- expr
+                                                                                                      |- expr
+                                                                                                        |- expr2
+                                                                                                          |- expr3
+                                                                                                            |- expr4
+                                                                                                              |- expr5
+                                                                                                                |- literal
+                                                                                                                  |- 1
+                                                                                                      |- +
+                                                                                                      |- expr2
+                                                                                                        |- expr2
+                                                                                                          |- expr3
+                                                                                                            |- expr4
+                                                                                                              |- expr5
+                                                                                                                |- literal
+                                                                                                                  |- 2
+                                                                                                        |- *
+                                                                                                        |- expr3
+                                                                                                          |- expr4
+                                                                                                            |- expr5
+                                                                                                              |- literal
+                                                                                                                |- 3
+                                                                                                    |- )
+                                                                                                  |- !
+                                                                                              |- code
+                                                                                                |- code_segment
+                                                                                                  |- non_cond_code_segment
+                                                                                                    |- funcCall
+                                                                                                      |- println
+                                                                                                      |- (
+                                                                                                      |- expr
+                                                                                                        |- expr
+                                                                                                          |- expr2
+                                                                                                            |- expr3
+                                                                                                              |- expr4
+                                                                                                                |- expr5
+                                                                                                                  |- literal
+                                                                                                                    |- 2
+                                                                                                        |- +
+                                                                                                        |- expr2
+                                                                                                          |- expr3
+                                                                                                            |- expr4
+                                                                                                              |- expr5
+                                                                                                                |- literal
+                                                                                                                  |- 3
+                                                                                                      |- )
+                                                                                                    |- !
+                                                                                                |- code
+                                                                                                  |- code_segment
+                                                                                                    |- non_cond_code_segment
+                                                                                                      |- funcCall
+                                                                                                        |- println
+                                                                                                        |- (
+                                                                                                        |- expr
+                                                                                                          |- expr
+                                                                                                            |- expr
+                                                                                                              |- expr2
+                                                                                                                |- expr3
+                                                                                                                  |- expr4
+                                                                                                                    |- expr5
+                                                                                                                      |- literal2
+                                                                                                                        |- "2 + 5 = "
+                                                                                                            |- +
+                                                                                                            |- expr2
+                                                                                                              |- expr3
+                                                                                                                |- expr4
+                                                                                                                  |- expr5
+                                                                                                                    |- literal
+                                                                                                                      |- 2
+                                                                                                          |- +
+                                                                                                          |- expr2
+                                                                                                            |- expr3
+                                                                                                              |- expr4
+                                                                                                                |- expr5
+                                                                                                                  |- literal
+                                                                                                                    |- 5
+                                                                                                        |- )
+                                                                                                      |- !
+                                                                                                  |- code
+                                                                                                    |- code_segment
+                                                                                                      |- non_cond_code_segment
+                                                                                                        |- funcCall
+                                                                                                          |- println
+                                                                                                          |- (
+                                                                                                          |- expr
+                                                                                                            |- expr
+                                                                                                              |- expr2
+                                                                                                                |- expr3
+                                                                                                                  |- expr4
+                                                                                                                    |- expr5
+                                                                                                                      |- literal2
+                                                                                                                        |- "2 + -5 = "
+                                                                                                            |- +
+                                                                                                            |- expr2
+                                                                                                              |- expr3
+                                                                                                                |- (
+                                                                                                                |- expr
+                                                                                                                  |- expr
+                                                                                                                    |- expr2
+                                                                                                                      |- expr3
+                                                                                                                        |- expr4
+                                                                                                                          |- expr5
+                                                                                                                            |- literal
+                                                                                                                              |- 2
+                                                                                                                  |- +
+                                                                                                                  |- expr2
+                                                                                                                    |- expr3
+                                                                                                                      |- expr4
+                                                                                                                        |- -
+                                                                                                                        |- expr4
+                                                                                                                          |- expr5
+                                                                                                                            |- literal
+                                                                                                                              |- 5
+                                                                                                                |- )
+                                                                                                          |- )
+                                                                                                        |- !
+                                                                                                    |- code
+                                                                                                      |- code_segment
+                                                                                                        |- non_cond_code_segment
+                                                                                                          |- varDec
+                                                                                                            |- dataType
+                                                                                                              |- kdr
+                                                                                                            |- identifiers
+                                                                                                              |- x
+                                                                                                          |- !
+                                                                                                      |- code
+                                                                                                        |- code_segment
+                                                                                                          |- non_cond_code_segment
+                                                                                                            |- funcCall
+                                                                                                              |- println
+                                                                                                              |- (
+                                                                                                              |- expr
+                                                                                                                |- expr2
+                                                                                                                  |- expr3
+                                                                                                                    |- expr4
+                                                                                                                      |- expr5
+                                                                                                                        |- literal2
+                                                                                                                          |- "yay nadeclare na ang x"
+                                                                                                              |- )
+                                                                                                            |- !
+                                                                                                        |- code
+                                                                                                          |- code_segment
+                                                                                                            |- non_cond_code_segment
+                                                                                                              |- assignment
+                                                                                                                |- x
+                                                                                                                |- =
+                                                                                                                |- expr
+                                                                                                                  |- expr2
+                                                                                                                    |- expr3
+                                                                                                                      |- expr4
+                                                                                                                        |- expr5
+                                                                                                                          |- literal
+                                                                                                                            |- 5
+                                                                                                              |- !
+                                                                                                          |- code
+                                                                                                            |- code_segment
+                                                                                                              |- non_cond_code_segment
+                                                                                                                |- funcCall
+                                                                                                                  |- println
+                                                                                                                  |- (
+                                                                                                                  |- expr
+                                                                                                                    |- expr
+                                                                                                                      |- expr2
+                                                                                                                        |- expr3
+                                                                                                                          |- expr4
+                                                                                                                            |- expr5
+                                                                                                                              |- literal2
+                                                                                                                                |- "x = "
+                                                                                                                    |- +
+                                                                                                                    |- expr2
+                                                                                                                      |- expr3
+                                                                                                                        |- expr4
+                                                                                                                          |- expr5
+                                                                                                                            |- x
+                                                                                                                  |- )
+                                                                                                                |- !
+                                                                                                            |- code
+                                                                                                              |- code_segment
+                                                                                                                |- non_cond_code_segment
+                                                                                                                  |- varDec
+                                                                                                                    |- dataType
+                                                                                                                      |- mmr
+                                                                                                                    |- identifiers
+                                                                                                                      |- y
+                                                                                                                  |- !
+                                                                                                              |- code
+                                                                                                                |- code_segment
+                                                                                                                  |- non_cond_code_segment
+                                                                                                                    |- funcCall
+                                                                                                                      |- println
+                                                                                                                      |- (
+                                                                                                                      |- expr
+                                                                                                                        |- expr2
+                                                                                                                          |- expr3
+                                                                                                                            |- expr4
+                                                                                                                              |- expr5
+                                                                                                                                |- literal2
+                                                                                                                                  |- "I'm gonna try to assign a FLOAT to an INTINIGGER"
+                                                                                                                      |- )
+                                                                                                                    |- !
+                                                                                                                |- code
+                                                                                                                  |- code_segment
+                                                                                                                    |- non_cond_code_segment
+                                                                                                                      |- assignment
+                                                                                                                        |- y
+                                                                                                                        |- =
+                                                                                                                        |- expr
+                                                                                                                          |- expr2
+                                                                                                                            |- expr3
+                                                                                                                              |- expr4
+                                                                                                                                |- expr5
+                                                                                                                                  |- literal2
+                                                                                                                                    |- 8.5
+                                                                                                                      |- !
+                                                                                                                  |- code
+                                                                                                                    |- code_segment
+                                                                                                                      |- non_cond_code_segment
+                                                                                                                        |- funcCall
+                                                                                                                          |- println
+                                                                                                                          |- (
+                                                                                                                          |- expr
+                                                                                                                            |- expr
+                                                                                                                              |- expr
+                                                                                                                                |- expr2
+                                                                                                                                  |- expr3
+                                                                                                                                    |- expr4
+                                                                                                                                      |- expr5
+                                                                                                                                        |- literal2
+                                                                                                                                          |- "y = "
+                                                                                                                              |- +
+                                                                                                                              |- expr2
+                                                                                                                                |- expr3
+                                                                                                                                  |- expr4
+                                                                                                                                    |- expr5
+                                                                                                                                      |- y
+                                                                                                                            |- +
+                                                                                                                            |- expr2
+                                                                                                                              |- expr3
+                                                                                                                                |- expr4
+                                                                                                                                  |- expr5
+                                                                                                                                    |- literal2
+                                                                                                                                      |- " OHDIBa I CAN DO tHAT OHHHHH YEAH #100"
+                                                                                                                          |- )
+                                                                                                                        |- !
+                                                                                                                    |- code
+                                                                                                                      |- code_segment
+                                                                                                                        |- non_cond_code_segment
+                                                                                                                          |- funcCall
+                                                                                                                            |- println
+                                                                                                                            |- (
+                                                                                                                            |- expr
+                                                                                                                              |- expr2
+                                                                                                                                |- expr3
+                                                                                                                                  |- expr4
+                                                                                                                                    |- expr5
+                                                                                                                                      |- literal2
+                                                                                                                                        |- "NOW STRING MINUS STRING OH SHIT"
+                                                                                                                            |- )
+                                                                                                                          |- !
+                                                                                                                      |- code
+                                                                                                                        |- code_segment
+                                                                                                                          |- non_cond_code_segment
+                                                                                                                            |- funcCall
+                                                                                                                              |- println
+                                                                                                                              |- (
+                                                                                                                              |- expr
+                                                                                                                                |- expr
+                                                                                                                                  |- expr2
+                                                                                                                                    |- expr3
+                                                                                                                                      |- expr4
+                                                                                                                                        |- expr5
+                                                                                                                                          |- literal2
+                                                                                                                                            |- "FUCK EVERRRYTHING"
+                                                                                                                                |- -
+                                                                                                                                |- expr2
+                                                                                                                                  |- expr3
+                                                                                                                                    |- expr4
+                                                                                                                                      |- expr5
+                                                                                                                                        |- literal2
+                                                                                                                                          |- "VER"
+                                                                                                                              |- )
+                                                                                                                            |- !
+                                                                                                                        |- code
+                                                                                                                          |- code_segment
+                                                                                                                            |- non_cond_code_segment
+                                                                                                                              |- funcCall
+                                                                                                                                |- println
+                                                                                                                                |- (
+                                                                                                                                |- expr
+                                                                                                                                  |- expr
+                                                                                                                                    |- expr
+                                                                                                                                      |- expr2
+                                                                                                                                        |- expr3
+                                                                                                                                          |- expr4
+                                                                                                                                            |- expr5
+                                                                                                                                              |- literal2
+                                                                                                                                                |- "I LOVE CMPILER"
+                                                                                                                                    |- -
+                                                                                                                                    |- expr2
+                                                                                                                                      |- expr3
+                                                                                                                                        |- expr4
+                                                                                                                                          |- expr5
+                                                                                                                                            |- literal2
+                                                                                                                                              |- "CMPILER"
+                                                                                                                                  |- +
+                                                                                                                                  |- expr2
+                                                                                                                                    |- expr3
+                                                                                                                                      |- expr4
+                                                                                                                                        |- expr5
+                                                                                                                                          |- literal2
+                                                                                                                                            |- "SIR THOMAS TIAM-LEE"
+                                                                                                                                |- )
+                                                                                                                              |- !
+                                                                                                                          |- code
+                                                                                                                            |- code_segment
+                                                                                                                              |- non_cond_code_segment
+                                                                                                                                |- funcCall
+                                                                                                                                  |- println
+                                                                                                                                  |- (
+                                                                                                                                  |- )
+                                                                                                                                |- !
+                                                                                                                            |- code
+                                                                                                                              |- code_segment
+                                                                                                                                |- non_cond_code_segment
+                                                                                                                                  |- funcCall
+                                                                                                                                    |- println
+                                                                                                                                    |- (
+                                                                                                                                    |- expr
+                                                                                                                                      |- expr
+                                                                                                                                        |- expr
+                                                                                                                                          |- expr2
+                                                                                                                                            |- expr3
+                                                                                                                                              |- expr4
+                                                                                                                                                |- expr5
+                                                                                                                                                  |- literal2
+                                                                                                                                                    |- "CRUSH NI SYFU SI PEDRO"
+                                                                                                                                        |- -
+                                                                                                                                        |- expr2
+                                                                                                                                          |- expr3
+                                                                                                                                            |- expr4
+                                                                                                                                              |- expr5
+                                                                                                                                                |- literal2
+                                                                                                                                                  |- "PEDRO"
+                                                                                                                                      |- +
+                                                                                                                                      |- expr2
+                                                                                                                                        |- expr2
+                                                                                                                                          |- expr3
+                                                                                                                                            |- expr4
+                                                                                                                                              |- expr5
+                                                                                                                                                |- literal2
+                                                                                                                                                  |- "BULOS"
+                                                                                                                                        |- *
+                                                                                                                                        |- expr3
+                                                                                                                                          |- expr4
+                                                                                                                                            |- expr5
+                                                                                                                                              |- literal
+                                                                                                                                                |- 5
+                                                                                                                                    |- )
+                                                                                                                                  |- !
+                                                                                                                              |- code
+                                                                                                                                |- code_segment
+                                                                                                                                  |- non_cond_code_segment
+                                                                                                                                    |- varDec
+                                                                                                                                      |- dataType
+                                                                                                                                        |- SAMPLETEXT
+                                                                                                                                      |- identifiers
+                                                                                                                                        |- blazeItNigga
+                                                                                                                                    |- !
+                                                                                                                                |- code
+                                                                                                                                  |- code_segment
+                                                                                                                                    |- non_cond_code_segment
+                                                                                                                                      |- assignment
+                                                                                                                                        |- blazeItNigga
+                                                                                                                                        |- =
+                                                                                                                                        |- expr
+                                                                                                                                          |- expr2
+                                                                                                                                            |- expr3
+                                                                                                                                              |- expr4
+                                                                                                                                                |- expr5
+                                                                                                                                                  |- literal2
+                                                                                                                                                    |- "\n\tIn 2013, the Angelo King Institute of Economic Business Studies partnered with the College of Computer Studies to develop a digital data collection, called the Community-Based Management System (CBMS). The data was collected digitally through mobile devices and a web portal. This is the dataset used in this Major Course Output (MCO).\n"
+                                                                                                                                      |- !
+                                                                                                                                  |- code
+                                                                                                                                    |- code_segment
+                                                                                                                                      |- non_cond_code_segment
+                                                                                                                                        |- funcCall
+                                                                                                                                          |- println
+                                                                                                                                          |- (
+                                                                                                                                          |- expr
+                                                                                                                                            |- expr2
+                                                                                                                                              |- expr3
+                                                                                                                                                |- expr4
+                                                                                                                                                  |- expr5
+                                                                                                                                                    |- blazeItNigga
+                                                                                                                                          |- )
+                                                                                                                                        |- !
+                                                                                                                                    |- code
+                                                                                                                                      |- code_segment
+                                                                                                                                        |- non_cond_code_segment
+                                                                                                                                          |- varDec
+                                                                                                                                            |- dataType
+                                                                                                                                              |- SAMPLETEXT
+                                                                                                                                            |- identifiers
+                                                                                                                                              |- assignment
+                                                                                                                                                |- fourtwenty
+                                                                                                                                                |- =
+                                                                                                                                                |- expr
+                                                                                                                                                  |- expr2
+                                                                                                                                                    |- expr3
+                                                                                                                                                      |- expr4
+                                                                                                                                                        |- expr5
+                                                                                                                                                          |- literal
+                                                                                                                                                            |- 420
+                                                                                                                                          |- !
+                                                                                                                                      |- code
+                                                                                                                                        |- code_segment
+                                                                                                                                          |- non_cond_code_segment
+                                                                                                                                            |- assignment
+                                                                                                                                              |- fourtwenty
+                                                                                                                                              |- =
+                                                                                                                                              |- expr
+                                                                                                                                                |- expr2
+                                                                                                                                                  |- expr3
+                                                                                                                                                    |- expr4
+                                                                                                                                                      |- expr5
+                                                                                                                                                        |- literal2
+                                                                                                                                                          |- 420.0
+                                                                                                                                            |- !
+                                                                                                                                        |- code
+                                                                                                                                          |- code_segment
+                                                                                                                                            |- non_cond_code_segment
+                                                                                                                                              |- funcCall
+                                                                                                                                                |- println
+                                                                                                                                                |- (
+                                                                                                                                                |- expr
+                                                                                                                                                  |- expr2
+                                                                                                                                                    |- expr3
+                                                                                                                                                      |- expr4
+                                                                                                                                                        |- expr5
+                                                                                                                                                          |- fourtwenty
+                                                                                                                                                |- )
+                                                                                                                                              |- !
+                                                                                                                                          |- code
+                                                                                                                                            |- code_segment
+                                                                                                                                              |- non_cond_code_segment
+                                                                                                                                                |- assignment
+                                                                                                                                                  |- fourtwenty
+                                                                                                                                                  |- =
+                                                                                                                                                  |- expr
+                                                                                                                                                    |- expr2
+                                                                                                                                                      |- expr3
+                                                                                                                                                        |- expr4
+                                                                                                                                                          |- expr5
+                                                                                                                                                            |- fourtwenty
+                                                                                                                                                |- !
+                                                                                                                                            |- code
+                                                                                                                                              |- code_segment
+                                                                                                                                                |- non_cond_code_segment
+                                                                                                                                                  |- funcCall
+                                                                                                                                                    |- print
+                                                                                                                                                    |- (
+                                                                                                                                                    |- expr
+                                                                                                                                                      |- expr
+                                                                                                                                                        |- expr2
+                                                                                                                                                          |- expr3
+                                                                                                                                                            |- expr4
+                                                                                                                                                              |- expr5
+                                                                                                                                                                |- literal2
+                                                                                                                                                                  |- "x = "
+                                                                                                                                                      |- +
+                                                                                                                                                      |- expr2
+                                                                                                                                                        |- expr3
+                                                                                                                                                          |- expr4
+                                                                                                                                                            |- expr5
+                                                                                                                                                              |- x
+                                                                                                                                                    |- )
+                                                                                                                                                  |- !
+                                                                                                                                              |- code
+                                                                                                                                                |- code_segment
+                                                                                                                                                  |- non_cond_code_segment
+                                                                                                                                                    |- funcCall
+                                                                                                                                                      |- print
+                                                                                                                                                      |- (
+                                                                                                                                                      |- expr
+                                                                                                                                                        |- expr
+                                                                                                                                                          |- expr2
+                                                                                                                                                            |- expr3
+                                                                                                                                                              |- expr4
+                                                                                                                                                                |- expr5
+                                                                                                                                                                  |- literal2
+                                                                                                                                                                    |- ", y = "
+                                                                                                                                                        |- +
+                                                                                                                                                        |- expr2
+                                                                                                                                                          |- expr3
+                                                                                                                                                            |- expr4
+                                                                                                                                                              |- expr5
+                                                                                                                                                                |- y
+                                                                                                                                                      |- )
+                                                                                                                                                    |- !
+                                                                                                                                                |- code
+                                                                                                                                                  |- code_segment
+                                                                                                                                                    |- non_cond_code_segment
+                                                                                                                                                      |- funcCall
+                                                                                                                                                        |- println
+                                                                                                                                                        |- (
+                                                                                                                                                        |- expr
+                                                                                                                                                          |- expr
+                                                                                                                                                            |- expr2
+                                                                                                                                                              |- expr3
+                                                                                                                                                                |- expr4
+                                                                                                                                                                  |- expr5
+                                                                                                                                                                    |- literal2
+                                                                                                                                                                      |- ", fourtwenty ="
+                                                                                                                                                          |- +
+                                                                                                                                                          |- expr2
+                                                                                                                                                            |- expr3
+                                                                                                                                                              |- expr4
+                                                                                                                                                                |- expr5
+                                                                                                                                                                  |- fourtwenty
+                                                                                                                                                        |- )
+                                                                                                                                                      |- !
+                                                                                                                                                  |- code
+                                                                                                                                                    |- code_segment
+                                                                                                                                                      |- non_cond_code_segment
+                                                                                                                                                        |- funcCall
+                                                                                                                                                          |- println
+                                                                                                                                                          |- (
+                                                                                                                                                          |- expr
+                                                                                                                                                            |- expr
+                                                                                                                                                              |- expr2
+                                                                                                                                                                |- expr3
+                                                                                                                                                                  |- expr4
+                                                                                                                                                                    |- expr5
+                                                                                                                                                                      |- fourtwenty
+                                                                                                                                                            |- +
+                                                                                                                                                            |- expr2
+                                                                                                                                                              |- expr3
+                                                                                                                                                                |- expr4
+                                                                                                                                                                  |- expr5
+                                                                                                                                                                    |- literal2
+                                                                                                                                                                      |- "BLAZEIT FAGGET"
+                                                                                                                                                          |- )
+                                                                                                                                                        |- !
+                                                                                                                                                    |- code
+                                                                                                                                                      |- code_segment
+                                                                                                                                                        |- non_cond_code_segment
+                                                                                                                                                          |- assignment
+                                                                                                                                                            |- fourtwenty
+                                                                                                                                                            |- =
+                                                                                                                                                            |- expr
+                                                                                                                                                              |- expr
+                                                                                                                                                                |- expr2
+                                                                                                                                                                  |- expr2
+                                                                                                                                                                    |- expr3
+                                                                                                                                                                      |- expr4
+                                                                                                                                                                        |- expr5
+                                                                                                                                                                          |- fourtwenty
+                                                                                                                                                                  |- *
+                                                                                                                                                                  |- expr3
+                                                                                                                                                                    |- expr4
+                                                                                                                                                                      |- expr5
+                                                                                                                                                                        |- x
+                                                                                                                                                              |- +
+                                                                                                                                                              |- expr2
+                                                                                                                                                                |- expr3
+                                                                                                                                                                  |- expr4
+                                                                                                                                                                    |- expr5
+                                                                                                                                                                      |- y
+                                                                                                                                                          |- !
+                                                                                                                                                      |- code
+                                                                                                                                                        |- code_segment
+                                                                                                                                                          |- non_cond_code_segment
+                                                                                                                                                            |- funcCall
+                                                                                                                                                              |- println
+                                                                                                                                                              |- (
+                                                                                                                                                              |- expr
+                                                                                                                                                                |- expr2
+                                                                                                                                                                  |- expr3
+                                                                                                                                                                    |- expr4
+                                                                                                                                                                      |- expr5
+                                                                                                                                                                        |- fourtwenty
+                                                                                                                                                              |- )
+                                                                                                                                                            |- !
+                                                                                                                                                        |- code
+                                                                                                                                                          |- code_segment
+                                                                                                                                                            |- non_cond_code_segment
+                                                                                                                                                              |- varDec
+                                                                                                                                                                |- dataType
+                                                                                                                                                                  |- SAMPLETEXT
+                                                                                                                                                                |- identifiers
+                                                                                                                                                                  |- str1
+                                                                                                                                                                  |- ,
+                                                                                                                                                                  |- identifiers
+                                                                                                                                                                    |- str2
+                                                                                                                                                                    |- ,
+                                                                                                                                                                    |- identifiers
+                                                                                                                                                                      |- assignment
+                                                                                                                                                                        |- str3
+                                                                                                                                                                        |- =
+                                                                                                                                                                        |- expr
+                                                                                                                                                                          |- expr2
+                                                                                                                                                                            |- expr3
+                                                                                                                                                                              |- expr4
+                                                                                                                                                                                |- expr5
+                                                                                                                                                                                  |- literal2
+                                                                                                                                                                                    |- "AWW YIS"
+                                                                                                                                                                      |- ,
+                                                                                                                                                                      |- identifiers
+                                                                                                                                                                        |- str4
+                                                                                                                                                                        |- ,
+                                                                                                                                                                        |- identifiers
+                                                                                                                                                                          |- assignment
+                                                                                                                                                                            |- str5
+                                                                                                                                                                            |- =
+                                                                                                                                                                            |- expr
+                                                                                                                                                                              |- expr2
+                                                                                                                                                                                |- expr3
+                                                                                                                                                                                  |- expr4
+                                                                                                                                                                                    |- expr5
+                                                                                                                                                                                      |- literal2
+                                                                                                                                                                                        |- "NaniSore?!?!"
+                                                                                                                                                              |- !
+                                                                                                                                                          |- code
+                                                                                                                                                            |- code_segment
+                                                                                                                                                              |- non_cond_code_segment
+                                                                                                                                                                |- varDec
+                                                                                                                                                                  |- dataType
+                                                                                                                                                                    |- mmr
+                                                                                                                                                                  |- identifiers
+                                                                                                                                                                    |- A
+                                                                                                                                                                    |- ,
+                                                                                                                                                                    |- identifiers
+                                                                                                                                                                      |- B
+                                                                                                                                                                      |- ,
+                                                                                                                                                                      |- identifiers
+                                                                                                                                                                        |- C
+                                                                                                                                                                |- !
+                                                                                                                                                            |- code
+                                                                                                                                                              |- code_segment
+                                                                                                                                                                |- non_cond_code_segment
+                                                                                                                                                                  |- assignment
+                                                                                                                                                                    |- C
+                                                                                                                                                                    |- =
+                                                                                                                                                                    |- assignment
+                                                                                                                                                                      |- B
+                                                                                                                                                                      |- =
+                                                                                                                                                                      |- assignment
+                                                                                                                                                                        |- A
+                                                                                                                                                                        |- =
+                                                                                                                                                                        |- expr
+                                                                                                                                                                          |- expr2
+                                                                                                                                                                            |- expr3
+                                                                                                                                                                              |- expr4
+                                                                                                                                                                                |- expr5
+                                                                                                                                                                                  |- literal
+                                                                                                                                                                                    |- 5000
+                                                                                                                                                                  |- !
+                                                                                                                                                              |- code
+                                                                                                                                                                |- code_segment
+                                                                                                                                                                  |- non_cond_code_segment
+                                                                                                                                                                    |- assignment
+                                                                                                                                                                      |- C
+                                                                                                                                                                      |- =
+                                                                                                                                                                      |- expr
+                                                                                                                                                                        |- expr2
+                                                                                                                                                                          |- expr3
+                                                                                                                                                                            |- expr4
+                                                                                                                                                                              |- expr5
+                                                                                                                                                                                |- literal
+                                                                                                                                                                                  |- 100000000
+                                                                                                                                                                    |- !
+                                                                                                                                                                |- code
+                                                                                                                                                                  |- code_segment
+                                                                                                                                                                      |- ILLUMINATI
+                                                                                                                                                                      |- CONFIRMED
+                                                                                                                                                                      |- (
+                                                                                                                                                                      |- comparative
+                                                                                                                                                                        |- comparative2
+                                                                                                                                                                          |- comparative3
+                                                                                                                                                                            |- comparative4
+                                                                                                                                                                              |- expr
+                                                                                                                                                                                |- expr2
+                                                                                                                                                                                  |- expr3
+                                                                                                                                                                                    |- expr4
+                                                                                                                                                                                      |- expr5
+                                                                                                                                                                                        |- C
+                                                                                                                                                                              |- <
+                                                                                                                                                                              |- expr
+                                                                                                                                                                                |- expr2
+                                                                                                                                                                                  |- expr3
+                                                                                                                                                                                    |- expr4
+                                                                                                                                                                                      |- expr5
+                                                                                                                                                                                        |- literal
+                                                                                                                                                                                          |- 5
+                                                                                                                                                                      |- )
+                                                                                                                                                                      |- code_block
+                                                                                                                                                                        |- {
+                                                                                                                                                                        |- code
+                                                                                                                                                                          |- code_segment
+                                                                                                                                                                            |- non_cond_code_segment
+                                                                                                                                                                              |- funcCall
+                                                                                                                                                                                |- println
+                                                                                                                                                                                |- (
+                                                                                                                                                                                |- expr
+                                                                                                                                                                                  |- expr2
+                                                                                                                                                                                    |- expr3
+                                                                                                                                                                                      |- expr4
+                                                                                                                                                                                        |- expr5
+                                                                                                                                                                                          |- literal2
+                                                                                                                                                                                            |- "ILLUMINATI CONFIRMED"
+                                                                                                                                                                                |- )
+                                                                                                                                                                              |- !
+                                                                                                                                                                          |- code
+                                                                                                                                                                        |- }
+                                                                                                                                                                      |- m
+                                                                                                                                                                        |- M
+                                                                                                                                                                        |- m
+                                                                                                                                                                      |- WHATCHASAY
+                                                                                                                                                                        |- ILLUMINATI
+                                                                                                                                                                        |- CONFIRMED
+                                                                                                                                                                        |- (
+                                                                                                                                                                        |- comparative
+                                                                                                                                                                          |- comparative2
+                                                                                                                                                                            |- comparative3
+                                                                                                                                                                              |- comparative4
+                                                                                                                                                                                |- expr
+                                                                                                                                                                                  |- expr2
+                                                                                                                                                                                    |- expr3
+                                                                                                                                                                                      |- expr4
+                                                                                                                                                                                        |- expr5
+                                                                                                                                                                                          |- C
+                                                                                                                                                                                |- <
+                                                                                                                                                                                |- expr
+                                                                                                                                                                                  |- expr2
+                                                                                                                                                                                    |- expr3
+                                                                                                                                                                                      |- expr4
+                                                                                                                                                                                        |- expr5
+                                                                                                                                                                                          |- literal
+                                                                                                                                                                                            |- 50000
+                                                                                                                                                                        |- )
+                                                                                                                                                                        |- code_block
+                                                                                                                                                                          |- {
+                                                                                                                                                                          |- code
+                                                                                                                                                                            |- code_segment
+                                                                                                                                                                              |- non_cond_code_segment
+                                                                                                                                                                                |- funcCall
+                                                                                                                                                                                  |- println
+                                                                                                                                                                                  |- (
+                                                                                                                                                                                  |- expr
+                                                                                                                                                                                    |- expr2
+                                                                                                                                                                                      |- expr3
+                                                                                                                                                                                        |- expr4
+                                                                                                                                                                                          |- expr5
+                                                                                                                                                                                            |- literal2
+                                                                                                                                                                                              |- "MMM whatchasayyyyy"
+                                                                                                                                                                                  |- )
+                                                                                                                                                                                |- !
+                                                                                                                                                                            |- code
+                                                                                                                                                                          |- }
+                                                                                                                                                                        |- m
+                                                                                                                                                                          |- M
+                                                                                                                                                                          |- m
+                                                                                                                                                                            |- M
+                                                                                                                                                                            |- m
+                                                                                                                                                                        |- WHATCHASAY
+                                                                                                                                                                        |- code_block
+                                                                                                                                                                          |- {
+                                                                                                                                                                          |- code
+                                                                                                                                                                            |- code_segment
+                                                                                                                                                                              |- non_cond_code_segment
+                                                                                                                                                                                |- funcCall
+                                                                                                                                                                                  |- println
+                                                                                                                                                                                  |- (
+                                                                                                                                                                                  |- expr
+                                                                                                                                                                                    |- expr2
+                                                                                                                                                                                      |- expr3
+                                                                                                                                                                                        |- expr4
+                                                                                                                                                                                          |- expr5
+                                                                                                                                                                                            |- literal2
+                                                                                                                                                                                              |- "I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH"
+                                                                                                                                                                                  |- )
+                                                                                                                                                                                |- !
+                                                                                                                                                                            |- code
+                                                                                                                                                                          |- }
+                                                                                                                                                                  |- code
   |- }
+|- funcList

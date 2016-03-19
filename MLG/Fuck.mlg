@@ -1,32 +1,10 @@
 PRESS START {
 
-	// you can set yourself on fire HEY
-	// you can set yourself on fire
-	/* she said eyy 
-		indi ko na alam yung lyrics feelings with drugs
-		she said you're just like mike
-		love but you wanna be brainwashed and brainwashed and
-		she said you're just like mike
-		loved but you wanna be brainwashed and */
-	println()!
+	println(5/0)!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-	/* and I SAID */
-	println("HEeheY HeheY if crazy = genius")!
-	println("Heyehey" +
-			"hehey if crazy.equals(GENIUS)" +
-			"THEN IMA FUCKING ARSONIST" +
-			"YEAH IMMA ROCKET SCIENTIST")!
-	print("Heheyey")!
-	print("! Heyey! ")!
-	println("IFcrazy==genius-HEY\n")!
-
-	// you can set yourself on fire
-	// you can set yourself on fiiire
-
-	println(1+1)!
+	println(1+1)!!!!!!!!!!!!!!!!!!!
 	println(1+2*3)!
 	println(2 + 3)!
-	println("expr")!
 	println("2 + 5 = " + 2+5)!
 	println("2 + -5 = " + (2+-5))!
 	kdr x!
@@ -50,25 +28,32 @@ PRESS START {
 	println()!
 	println("CRUSH NI SYFU SI PEDRO" - "PEDRO" + "BULOS" * 5)!
 
-	mmr koSaDota2 = 9000!
-	println(koSaDota2)!
-
 	SAMPLETEXT blazeItNigga!
-	blazeItNigga = "In 2013, the Angelo King Institute of Economic Business Studies partnered with the College of Computer Studies to develop a digital data collection, called the Community-Based Management System (CBMS). The data was collected digitally through mobile devices and a web portal. This is the dataset used in this Major Course Output (MCO).\n\n" +
-"The group developed a simple Java application that allows the user to extract data from the Palawan and Mindoro CBMS Dataset, such as the bio-profile of different household members, their educational attainment and work experience, their social indicators, and criminal or mortuary events. It goes into a very deep level of detail in some respects, such as social indicators or work status: it records, for example, the different kinds of technological devices in a particular household, the total aquatic animal catches per equipment, and PhilHealth beneficiaries. Depending on the type of SQL query performed on the database, even more detail can be derived about Palawan and/or Mindoro residents from this data. For example, the average amount of fish per type caught by region, the average number of OFWs per nuclear family, etc.\n\n" +
-"The goal of this project is for students to realize the impact of query structures to the performance of the application. Depending on the structure of the SQL query used, it should take longer or shorter to get results, and for this, a big database was needed, thus the need for CBMS. Also, via this project, we will realize the correlation between good database design and snappier performance. This reports the queries used by this group and the optimizations done to those queries in order to result in the best possible performance."!
+	blazeItNigga = "\n\tIn 2013, the Angelo King Institute of Economic Business Studies partnered with the College of Computer Studies to develop a digital data collection, called the Community-Based Management System (CBMS). The data was collected digitally through mobile devices and a web portal. This is the dataset used in this Major Course Output (MCO).\n"!
 	println(blazeItNigga)!
 
 	SAMPLETEXT fourtwenty = 420!
-	println(fourtwenty)!
 	fourtwenty = 420.0!
 	println(fourtwenty)!
 	fourtwenty = fourtwenty!
-	println(fourtwenty + "BLAZEIT FAGGET")!
+	print("x = "+x)!
+	print(", y = "+y)!
+	println(", fourtwenty =" + fourtwenty)!
+	println(fourtwenty +  "BLAZEIT FAGGET")!
 	fourtwenty = fourtwenty * x + y!
-	println(fourtwenty + "-- AWWWW di na sya fourtwenty ibang variable naman")!
+	println(fourtwenty )!
 
 	SAMPLETEXT str1, str2, str3 = "AWW YIS", str4, str5="NaniSore?!?!"!
-	println(str5)!
+	mmr A,B,C!
+	C = B= A = 5000!
+	C = 100000000!
+
+	ILLUMINATI CONFIRMED (C < 5){
+		println("ILLUMINATI CONFIRMED")!
+	} M M M M WHATCHASAY ILLUMINATI CONFIRMED (C < 50000) {
+		println("MMM whatchasayyyyy")!
+	} M M M WHATCHASAY {
+		println("I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH")!
+	}
 
 }

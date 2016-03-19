@@ -16,9 +16,9 @@ public class ConcreteTokenizer implements Tokenizer {
 		state = 0;
 		currToken = "";
 		reserved = new String[] {
-			"IF","mmr","kdr","char","SAMPLETEXT","isMLG","WHILE","DO","FOR",
-			"THEN","AND","OR","NOT","ELSE","print","println","fuckTheUniverse",
-			"PRESS","START"
+			"mmr","kdr","char","SAMPLETEXT","isMLG","WHILE","DO","FOR",
+			"AND","OR","NOT","ELSE","print","println","fuckTheUniverse",
+			"PRESS","START","ILLUMINATI","CONFIRMED","M","WHATCHASAY"
 		};
 		operators = new String[] {
 			"(","+","-","[","=","*","/","{","<","<=",">",">=","==","!=","!",

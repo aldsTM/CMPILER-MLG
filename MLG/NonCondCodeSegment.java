@@ -25,6 +25,7 @@ public class NonCondCodeSegment extends NonTerminal {
 				break;
 			case "arrDec !":
 				type = "arrDec";
+				printIndent("!");
 				break;
 			case "assignment !":
 				type = "assignment";
@@ -68,6 +69,8 @@ public class NonCondCodeSegment extends NonTerminal {
 			JFrame f = new JFrame("Fuck Da Universe");
 			f.setSize(300,400);
 			f.setVisible(true);
+		} else if (getProdString().trim().equals("!")) {
+			// do nothing; ignore!
 		} else {
 			nt = (NonTerminal) getAsObject("line");
 			try {
