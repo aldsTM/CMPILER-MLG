@@ -4,9 +4,23 @@ public class FuncCall extends NonTerminal {
 	}
 
 	public void interpret() throws Exception {
+		NonTerminal nt;
 		printBranch();
 		switch(getProdString()) {
 			case "IDENTIFIER ( funcCallParams )":
+
+				put("IDENTIFIER",((Token)getComponent("IDENTIFIER")).token());
+				printIndent(((Token)getComponent("IDENTIFIER")).token());
+				put("lineNo",((Token)getComponent("IDENTIFIER")).lineNo());
+
+				printIndent("(");
+
+				nt = (NonTerminal) getComponent("funcCallParams");
+				propagate(nt);
+				nt.interpret();
+
+				printIndent(")");
+
 				break;
 			case "print ( expr )":
 			case "println ( expr )":
@@ -17,7 +31,7 @@ public class FuncCall extends NonTerminal {
 				}
 				printIndent("(");
 
-				NonTerminal nt = (NonTerminal) getComponent("expr");
+				nt = (NonTerminal) getComponent("expr");
 				propagate(nt);
 				nt.interpret();
 				put("line",nt);
@@ -29,6 +43,11 @@ public class FuncCall extends NonTerminal {
 				printIndent("(");
 				printIndent(")");
 				break;
+			case "scanf":
+				nt = (NonTerminal) getComponent("scanf");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
 			default:
 		}
 	}
@@ -37,6 +56,7 @@ public class FuncCall extends NonTerminal {
 		NonTerminal nt;
 		switch(getProdString()) {
 			case "IDENTIFIER ( funcCallParams )":
+				System.out.println("You called a user-defined function.");
 				break;
 			case "print ( expr )":
 				nt = (NonTerminal) getAsObject("line");
@@ -50,6 +70,10 @@ public class FuncCall extends NonTerminal {
 				break;
 			case "println ( )":
 				System.out.println();
+				break;
+			case "scanf":
+				System.out.println("Scanf statement done");
+				break;
 			default:
 		}
 	}

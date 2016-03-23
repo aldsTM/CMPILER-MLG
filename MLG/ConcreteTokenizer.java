@@ -16,13 +16,14 @@ public class ConcreteTokenizer implements Tokenizer {
 		state = 0;
 		currToken = "";
 		reserved = new String[] {
-			"mmr","kdr","char","SAMPLETEXT","isMLG","WHILE","DO","FOR",
+			"mmr","kdr","char","SAMPLETEXT","isMLG","SMOKE","WEED","EVERYDAY",
 			"AND","OR","NOT","ELSE","print","println","fuckTheUniverse",
-			"PRESS","START","ILLUMINATI","CONFIRMED","M","WHATCHASAY"
+			"PRESS","START","ILLUMINATI","CONFIRMED","M","WHATCHASAY",
+			"FOR","TWENTY","CANTTOUCHTHIS","SONG","NAME"
 		};
 		operators = new String[] {
 			"(","+","-","[","=","*","/","{","<","<=",">",">=","==","!=","!",
-			",",")","]","}",";","%"
+			",",")","]","}",";","%","?"
 		};
 	}
 

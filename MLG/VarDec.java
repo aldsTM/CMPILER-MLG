@@ -6,7 +6,7 @@ public class VarDec extends NonTerminal {
 	}
 
 	public void interpret() throws Exception {
-		NonTerminal nt, nt2;
+		NonTerminal optional, nt, nt2;
 		printBranch();
 		switch(getProdString()) {
 			case "dataType identifiers":

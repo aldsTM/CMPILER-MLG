@@ -20,16 +20,20 @@ public class MainFunc extends NonTerminal {
 		SymbolTable.instance().pushContext();
 		CodeSegment[] codes = code.getCodes();
 		boolean fail = false;
-		for(CodeSegment cs: codes) {
-			switch( cs.getType() ) {
-				case "return":
+		if (codes.length > 1){
+			for(CodeSegment cs: codes) {
+				switch( cs.getType() ) {
+					case "return":
+						break;
+					default:
+						cs.execute();
+				}
+				if( fail ) {
 					break;
-				default:
-					cs.execute();
+				}
 			}
-			if( fail ) {
-				break;
-			}
+		} else {
+			System.out.println("\n\n   The main function is empty. \n   What the hell, man?\n");
 		}
 	}
 }

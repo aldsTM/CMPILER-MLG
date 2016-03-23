@@ -1,0 +1,178 @@
+// CMPILER Machine Project: Interpreter System
+PRESS START {
+
+	println("\n")!
+	
+	// Comments
+	/* You can do single-line comments like the this line or the line above */
+	/* You can do multi-line comments */
+	/* You can have faith or hope down the telescope
+		You can have sight and soul in the stars
+		You can break everything down to chemicals
+		But you can't explain a love like ours
+		-- Science and Faith, The Script */
+	
+	// Variable Declaration
+	mmr luigi!
+	mmr miguel!
+	mmr x, y, z!
+	kdr alds!
+	kdr sum, avg!
+	char sampleCharVar!
+	SAMPLETEXT str, str2!
+	isMLG sampleBoolVar, sampleBoolVar2!
+	
+	// Constant Declaration
+	CANTTOUCHTHIS mmr MAX_MLG_SKEELZ = 420!
+	
+	// Assignment
+	luigi = 4000!
+	miguel = 2900!
+	alds = 6.9!
+	sampleBoolVar = true!
+	sampleBoolVar = false!
+	SAMPLETEXT CopyPasta = "\n\tIn 2013, the Angelo King Institute of Economic Business Studies partnered with the College of Computer Studies to develop a digital data collection, called the Community-Based Management System (CBMS). The data was collected digitally through mobile devices and a web portal. This is the dataset used in this Major Course Output (MCO).\n"!
+
+	// QA shit; surprise test case!
+	kdr alds!
+	println("alds value = " + alds!)
+
+	x = y = z = 500!
+	
+	// Input Statement
+	SAMPLETEXT userInput = SONG NAME?(SAMPLETEXT)!
+
+	// Output Statement
+	print("Luigi's MMR in Dota 2 is " + luigi + " ")!
+	println("while Miguel's SOLO MMR is " + miguel + " :))")!
+	println(CopyPasta)!
+
+	// Math Expressions
+		
+		// Simple
+		println("\nx = " + x + ", y = " + y + ", z = " + z)!
+		x = y + z * 5!
+		println("Simple math expression: x = y + z * 5\nx = " + x)!
+		
+		// Complex (includes arrays, function calls)
+		/* WOOPS: We can't EVALUATE arrays or functions yet */
+		/* TRYING TO USE arrays or functions in expressions will result in errors */
+	
+	// Conditional Statement
+	println()!
+	mmr A, B, C!
+	C = B = A = 5000!
+
+		// Sample 1
+		ILLUMINATI CONFIRMED (C < 5 OR (10 > (5*5*5*5) OR 10 > 2 )){
+			println("ILLUMINATI CONFIRMED")!
+		} M M M M WHATCHASAY ILLUMINATI CONFIRMED (C < 50000) {
+			println("MMM whatchasayyyyy")!
+		} M M M WHATCHASAY {
+			println("I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH")!
+		}
+
+		// Sample 2
+		ILLUMINATI CONFIRMED (C > 12345) {
+			println("Oooo whatchasaaaaay")!
+		} M WHATCHASAY {
+			println("Congrats! You made it here =))")!
+		}
+
+		// Sample 3
+		ILLUMINATI CONFIRMED (5<5){
+			println("ILLUMINATI CONFIRMED")!
+		} M M M M WHATCHASAY ILLUMINATI CONFIRMED (A == B) {
+			println("MMM whatchasayyyyy")!
+		} M M M WHATCHASAY {
+			println("I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH")!
+		}
+
+	// Boolean Expressions
+	sampleBoolVar = true!
+	sampleBoolVar2 = false!
+	isMLG sampleBoolVar3 = 'T', sampleBoolVar4 = 1!
+	println()!
+		
+		// Simple
+		ILLUMINATI CONFIRMED (sampleBoolVar == true){
+			println("sample bool var 1 = true.")!
+		}
+		
+		// Complex / Simple Logical
+		ILLUMINATI CONFIRMED ((true == true AND false == true)){
+			println("Cue the x-files theme song, ladies and gentlemen")!
+		} M WHATCHASAY {
+			println("Cue the x-files theme song anyway.")!
+		}
+		
+		// Multiple / Complex Logical
+		ILLUMINATI CONFIRMED (C < 5 OR (10 > (5*5*5*5) OR true == false) OR (true == true AND 1 > false)){
+			println("ILLUMINATI CONFIRMED")!
+		}
+
+	/* IMPORTANT NOTE: From this point onward, the code is NOT interpreted; only parsed. */
+	/* DO NOT expect the following code to actually RUN */
+	println()!
+	
+	// Iterative Statements
+		
+		// Event-controlled loop (WHILE loop)
+		EVERYDAY ( B < 5000 ){
+			println("I'm shuffling!")!
+			B = B + 2!
+		}
+		
+		// Count-controlled loop (FOR loop)
+		B = 4997!
+		FOR TWENTY ( mmr i = 1 ; i <= 10 ; i = i + 1 ) {
+			println("B = " + B)!
+		}
+		
+		// Repeat-until loop
+		A = 8995!
+		SMOKE WEED {
+			ILLUMINATI CONFIRMED (A == 8995){
+				print("SMOKE WEED EVERYDAY! ")!
+			} M WHATCHASAY {
+				print("AY-eh-eh-eh-AY")!
+			}
+			A = A + 1!
+			println(" A = " + A)!
+		} EVERYDAY ( A < 9000)!
+	
+	
+	// Functions / Methods
+	/* ALL FUNCTIONS ARE DECLARED AFTER THE MAIN FUNCTION */
+	/* THOSE FUNCTIONS, WHEN RAN, DISPLAY RECURSION, AND CAN CALL OTHER FUNCTIONS
+	 * ALSO, THOSE FUNCTIONS HAVE THEIR OWN SCOPE NA so variables can be redeclared there
+	 */
+
+		// Function Call
+		sampleFunction(SampleBooleanVar)!
+	
+	// Arrays
+	// Sample Declaration
+	[1,2,3,4,5,6,7,8,9,10]!
+
+	println()!
+
+}
+
+mmr func1(){
+	println(1)!
+}
+
+mmr sampleFunction(isMLG boolVal){
+	ILLUMINATI CONFIRMED (boolVal == true){
+		println("congrats! You made it here!!!")!
+		mmr x = sampleFunction(true)!
+		ILLUMINATI CONFIRMED (x == 1){
+			x = func1()!
+		}
+		//return 1!
+	} M WHATCHASAY {
+		println("NAH")!
+		//return 0!
+	}
+}

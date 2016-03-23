@@ -26,6 +26,8 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 				return new CodeSegment(pattern);
 			case "varDec":
 				return new VarDec(pattern);
+			case "constDec":
+				return new ConstDec(pattern);
 			case "dataType":
 				return new DataType(pattern);
 			case "identifiers":
@@ -49,16 +51,15 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 			case "literal3":
 				return new Literal3(pattern);
 			case "funcDec":
-				//return new funcDec(pattern);
-				return null;
+				return new FuncDec(pattern);
 			case "funcParams":
-				//return new funcParams(pattern);
-				return null;
+				return new FuncParams(pattern);
 			case "funcCall":
 				return new FuncCall(pattern);
+			case "scanf":
+				return new ScanF(pattern);
 			case "funcCallParams":
-				//return new funcCallParams(pattern);
-				return null;
+				return new FuncCallParams(pattern);
 			case "comparative":
 				return new Comparative(pattern);
 			case "comparative2":
@@ -74,26 +75,13 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 			case "m":
 				return new M(pattern);
 			case "loop":
-				//return new loop(pattern);
-				return null;
-			case "whileLoop":
-				//return new whileLoop(pattern);
-				return null;
-			case "doWhileLoop":
-				//return new doWhileLoop(pattern);
-				return null;
-			case "forLoop":
-				//return new forLoop(pattern);
-				return null;
+				return new Loop(pattern);
 			case "arrDec":
-				//return new arrDec(pattern);
-				return null;
-			case "arrIndex":
-				//return new arrIndex(pattern);
-				return null;
-			case "arrAssignment":
-				//return new arrAssignment(pattern);
-				return null;
+				return new ArrDec(pattern);
+			case "arrDimens":
+				return new ArrDimens(pattern);
+			case "arrVals":
+				return new ArrVals(pattern);
 			default:
 				return null;
 		}

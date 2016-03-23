@@ -40,7 +40,17 @@ public class Assignment extends NonTerminal {
 				isArray = false;
 				break;
 			case "IDENTIFIER = funcCall":
-				isArray = false;
+				t = (Token) getComponent("IDENTIFIER");
+				printIndent(t.token());
+				put("IDENTIFIER",t.token());
+
+				printIndent("=");
+
+				isArray = true;
+				nt = (NonTerminal) getComponent("funcCall");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
 				break;
 			default:
 		}
@@ -73,6 +83,7 @@ public class Assignment extends NonTerminal {
 		}
 
 		if (isArray){
+			System.out.println("Did an assignment statement! This type of assignment is not supported yet, though");
 			// handle this later
 		} else {
 			switch(typeOfVariable){

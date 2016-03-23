@@ -221,6 +221,49 @@ public class Comparative4 extends NonTerminal {
 								break;
 						}
 						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 <= nt2.getAsInt("val"));
+								} else {
+									put("val",0 <= nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 <= nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 <= nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									put("val",true);
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									if (nt.getAsBoolean("val") == true){
+										put("val",false);
+									} else {
+										put("val",true);
+									}
+								}
+								break;
+							case "boolean":
+								if (nt.getAsBoolean("val") == true){
+									if (nt2.getAsBoolean("val") == true){
+										put("val",true);
+									} else {
+										put("val",false);
+									}
+								} else {
+									put("val",true);
+								}
+							case "array":
+								break;
+						}
+						break;
 					case "array":
 						switch (nt2.getAsString("type")){
 							case "int":
@@ -355,6 +398,49 @@ public class Comparative4 extends NonTerminal {
 								break;
 							case "boolean":
 								break;
+							case "array":
+								break;
+						}
+						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 >= nt2.getAsInt("val"));
+								} else {
+									put("val",0 >= nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 >= nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 >= nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									if (nt.getAsBoolean("val") == true){
+										put("val",true);
+									} else {
+										put("val",false);
+									}
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									put("val",true);
+								}
+								break;
+							case "boolean":
+								if (nt.getAsBoolean("val") == true){
+									put("val",true);									
+								} else {
+									if (nt2.getAsBoolean("val") == false){
+										put("val",true);
+									} else {
+										put("val",false);
+									}
+								}
 							case "array":
 								break;
 						}
@@ -497,6 +583,49 @@ public class Comparative4 extends NonTerminal {
 								break;
 						}
 						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 < nt2.getAsInt("val"));
+								} else {
+									put("val",0 < nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 < nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 < nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									if (nt.getAsBoolean("val") == true){
+										put("val",false);
+									} else {
+										put("val",true);
+									}
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									put("val",false);
+								}
+								break;
+							case "boolean":
+								if (nt.getAsBoolean("val") == true){
+									put("val",false);									
+								} else {
+									if (nt2.getAsBoolean("val") == false){
+										put("val",false);
+									} else {
+										put("val",true);
+									}
+								}
+							case "array":
+								break;
+						}
+						break;
 					case "array":
 						switch (nt2.getAsString("type")){
 							case "int":
@@ -522,7 +651,6 @@ public class Comparative4 extends NonTerminal {
 				}
 				break;
 			case "expr > expr":
-				System.out.println("I'M HERE FUCKER ");
 				error = false;
 				nt = (NonTerminal) getAsObject("line");
 				nt2 = (NonTerminal) getAsObject("line2");
@@ -533,9 +661,6 @@ public class Comparative4 extends NonTerminal {
 						switch (nt2.getAsString("type")){
 							case "int":
 								put("val",nt.getAsInt("val") > nt2.getAsInt("val"));
-								System.out.println("VAL IS " + nt.getAsInt("val"));
-								System.out.println("VAL2 IS " + nt2.getAsInt("val"));
-								System.out.println(nt.getAsInt("val") > nt2.getAsInt("val"));
 								break;
 							case "float":
 								put("val",nt.getAsInt("val") > nt2.getAsFloat("val"));
@@ -635,6 +760,49 @@ public class Comparative4 extends NonTerminal {
 								break;
 							case "boolean":
 								break;
+							case "array":
+								break;
+						}
+						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 > nt2.getAsInt("val"));
+								} else {
+									put("val",0 > nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 > nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 > nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									put("val",false);
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									if(nt.getAsBoolean("val") == true){
+										put("val",true);
+									} else {
+										put("val",false);
+									}
+								}
+								break;
+							case "boolean":
+								if (nt.getAsBoolean("val") == true){
+									if (nt2.getAsBoolean("val") == true){
+										put("val",false);
+									} else {
+										put("val",true);
+									}								
+								} else {
+									put("val",false);
+								}
 							case "array":
 								break;
 						}
@@ -777,6 +945,37 @@ public class Comparative4 extends NonTerminal {
 								break;
 						}
 						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 == nt2.getAsInt("val"));
+								} else {
+									put("val",0 == nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 == nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 == nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									put("val",nt.getAsBoolean("val") == true);
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									put("val",nt.getAsBoolean("val") == false);
+								}
+								break;
+							case "boolean":
+								put("val",nt.getAsBoolean("val") == nt2.getAsBoolean("val"));
+							case "array":
+								break;
+						}
+						break;
 					case "array":
 						switch (nt2.getAsString("type")){
 							case "int":
@@ -911,6 +1110,37 @@ public class Comparative4 extends NonTerminal {
 								break;
 							case "boolean":
 								break;
+							case "array":
+								break;
+						}
+						break;
+					case "boolean":
+						switch (nt2.getAsString("type")){
+							case "int":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1 != nt2.getAsInt("val"));
+								} else {
+									put("val",0 != nt2.getAsInt("val"));
+								}
+								break;
+							case "float":
+								if (nt.getAsBoolean("val") == true){
+									put("val",1.0 != nt2.getAsFloat("val"));
+								} else {
+									put("val",0.0 != nt2.getAsFloat("val"));
+								}
+								break;
+							case "char":
+								break;
+							case "string":
+								if (nt2.getAsString("val").equalsIgnoreCase("true")){
+									put("val",nt.getAsBoolean("val") != true);
+								} else if (nt2.getAsString("val").equalsIgnoreCase("false")){
+									put("val",nt.getAsBoolean("val") != false);
+								}
+								break;
+							case "boolean":
+								put("val",nt.getAsBoolean("val") != nt2.getAsBoolean("val"));
 							case "array":
 								break;
 						}

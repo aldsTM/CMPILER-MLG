@@ -31,6 +31,19 @@ public class Expr5 extends NonTerminal {
 				nt.interpret();
 				put("line",nt);
 				break;
+			case "literal3":
+				nt = (NonTerminal) getComponent("literal3");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
+				break;
+			case "NOT literal3":
+				printIndent("NOT");
+				nt = (NonTerminal) getComponent("literal3");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
+				break;
 			case "IDENTIFIER":
 				put("IDENTIFIER",((Token)getComponent("IDENTIFIER")).token());
 				printIndent(((Token)getComponent("IDENTIFIER")).token());
@@ -80,6 +93,32 @@ public class Expr5 extends NonTerminal {
 						put("type","string");
 						put("val",nt.getAsString("val"));
 						break;
+				}
+				break;
+			case "literal3":
+				nt = (NonTerminal) getAsObject("line");
+				nt.execute();
+				switch(nt.getAsString("type")){
+					case "boolean":
+						put("type","boolean");
+						put("val",nt.getAsBoolean("val"));
+						break;
+					default:
+				}
+				break;
+			case "NOT literal3":
+				nt = (NonTerminal) getAsObject("line");
+				nt.execute();
+				switch(nt.getAsString("type")){
+					case "boolean":
+						put("type","boolean");
+						if (nt.getAsBoolean("val") == true){
+							put("val",false);
+						} else {
+							put("val",true);
+						}
+						break;
+					default:
 				}
 				break;
 			case "IDENTIFIER":

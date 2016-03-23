@@ -48,12 +48,73 @@ PRESS START {
 	C = B= A = 5000!
 	C = 100000000!
 
-	ILLUMINATI CONFIRMED (C < 5){
+	ILLUMINATI CONFIRMED (C < 5 OR (10 > (5*5*5*5) OR 10 > 2 )){
 		println("ILLUMINATI CONFIRMED")!
 	} M M M M WHATCHASAY ILLUMINATI CONFIRMED (C < 50000) {
 		println("MMM whatchasayyyyy")!
-	} M M M WHATCHASAY {
-		println("I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH")!
+	} //M M M WHATCHASAY {
+	//	println("I AM YOUR WORST, I AM YOUR WORST NAHAHNAHNAHNAHNAH")!
+	//}
+
+	println("\n\n-------------------------------------------------------------------------------------------")!
+	println("ALL CODES BELOW THIS LINE ARE NOT YET WORKING (But they are being parsed, don't worry)")!
+	println("-------------------------------------------------------------------------------------------\n\n")!
+
+	A = 8995!
+	SMOKE WEED {
+		ILLUMINATI CONFIRMED (A == 8995){
+			print("SMOKE WEED EVERYDAY! ")!
+		} M WHATCHASAY {
+			print("AY-eh-eh-eh-AY")!
+		}
+		A = A + 1!
+		println(" A = " + A)!
+	} EVERYDAY ( A < 9000)!
+
+	B = 4997!
+	FOR TWENTY ( mmr i = 1 ; i <= 10 ; i = i + 1 ) {
+		print("JUST BLAZE... " + B)!
 	}
 
+	EVERYDAY ( B < 5000 ){
+		println("I'm shuffling!")!
+		B = B + 2!
+	}
+
+	CANTTOUCHTHIS mmr WOO = "900"!
+	mmr NANI = "999999"!
+	println(NANI)!
+
+	isMLG SampleBooleanVar!
+	SampleBooleanVar = false!!
+	ILLUMINATI CONFIRMED (SampleBooleanVar == NOT false){
+		println("SampleBooleanVar == true")!
+	} M M M WHATCHASAY {
+		println("SampleBooleanVar == false")!
+	}
+
+	SAMPLETEXT userInput = SONG NAME? (SAMPLETEXT)!
+
+	sampleFunction(SampleBooleanVar)!
+
+	[999,999,999]!
+
+}
+
+mmr func1(){
+	println(1)!
+}
+
+mmr sampleFunction(isMLG boolVal){
+	ILLUMINATI CONFIRMED (boolVal == true){
+		println("congrats! You made it here!!!")!
+		mmr x = sampleFunction(true)!
+		ILLUMINATI CONFIRMED (x == 1){
+			x = func1()!
+		}
+		//return 1!
+	} M WHATCHASAY {
+		println("NAH")!
+		//return 0!
+	}
 }

@@ -19,17 +19,17 @@ public class Comparative3 extends NonTerminal {
 
 				put("line",nt);
 				break;
-			case "literal3":
-			case "NOT literal3":
-				if (getProdString().contains("NOT")) {
-					printIndent("NOT");
-				}
+			// case "literal3":
+			// case "NOT literal3":
+			// 	if (getProdString().contains("NOT")) {
+			// 		printIndent("NOT");
+			// 	}
 
-				nt = (NonTerminal) getComponent("literal3");
-				propagate(nt);
-				nt.interpret();
-				put("line",nt);
-				break;
+			// 	nt = (NonTerminal) getComponent("literal3");
+			// 	propagate(nt);
+			// 	nt.interpret();
+			// 	put("line",nt);
+			// 	break;
 			case "comparative4":
 				nt = (NonTerminal) getComponent("comparative4");
 				propagate(nt);
@@ -55,28 +55,28 @@ public class Comparative3 extends NonTerminal {
 					put("type","error");
 				}
 				break;
-			case "literal3":
-				error = false;
-				nt = (NonTerminal) getAsObject("line");
-				if (nt.getAsString("type").equals("boolean")) {
-					put("type","boolean");
-					put("val",nt.getAsBoolean("type"));
-				} else {
-					error = true;
-					put("type","error");
-				}
-				break;
-			case "NOT literal3":
-				error = false;
-				nt = (NonTerminal) getAsObject("line");
-				if (nt.getAsString("type").equals("boolean")) {
-					put("type","boolean");
-					put("val",!(nt.getAsBoolean("type")));
-				} else {
-					error = true;
-					put("type","error");
-				}
-				break;
+			// case "literal3":
+			// 	error = false;
+			// 	nt = (NonTerminal) getAsObject("line");
+			// 	if (nt.getAsString("type").equals("boolean")) {
+			// 		put("type","boolean");
+			// 		put("val",nt.getAsBoolean("type"));
+			// 	} else {
+			// 		error = true;
+			// 		put("type","error");
+			// 	}
+			// 	break;
+			// case "NOT literal3":
+			// 	error = false;
+			// 	nt = (NonTerminal) getAsObject("line");
+			// 	if (nt.getAsString("type").equals("boolean")) {
+			// 		put("type","boolean");
+			// 		put("val",!(nt.getAsBoolean("type")));
+			// 	} else {
+			// 		error = true;
+			// 		put("type","error");
+			// 	}
+			// 	break;
 			case "comparative4":
 				error = false;
 				nt = (NonTerminal) getAsObject("line");

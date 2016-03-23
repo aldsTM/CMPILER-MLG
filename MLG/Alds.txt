@@ -7,10 +7,15 @@ funcList,
 code,code_segment code
 code,
 
+//did you forget this?
+code_segment,conditional
+code_segment,non_cond_code_segment
+
 non_cond_code_segment,varDec !
+non_cond_code_segment,constDec !
 
 //fixed
-//non_cond_code_segment,arrDec !
+non_cond_code_segment,arrDec !
 
 //code_segment,identifiers
 non_cond_code_segment,assignment !
@@ -19,11 +24,8 @@ non_cond_code_segment,loop
 non_cond_code_segment,fuckTheUniverse !
 non_cond_code_segment,!
 
-//did you forget this?
-code_segment,conditional
-code_segment,non_cond_code_segment
-
 varDec,dataType identifiers
+constDec,CANTTOUCHTHIS dataType assignment
 
 // int
 dataType,mmr
@@ -67,6 +69,8 @@ expr5,IDENTIFIER ++
 expr5,IDENTIFIER --
 expr5,literal
 expr5,literal2
+expr5,literal3
+expr5,NOT literal3
 //expr5,( comparative )
 expr5,IDENTIFIER
 //expr5,IDENTIFIER arrIndex
@@ -88,6 +92,9 @@ funcCall,IDENTIFIER ( funcCallParams )
 funcCall,print ( expr )
 funcCall,println ( expr )
 funcCall,println ( )
+funcCall,scanf
+
+scanf,SONG NAME ? ( dataType )
 
 //fixed
 funcCallParams,expr
@@ -104,8 +111,8 @@ comparative,comparative2
 comparative2,comparative2 OR comparative3
 comparative2,comparative3
 comparative3,NOT ( comparative3 )
-comparative3,literal3
-comparative3,NOT literal3
+//comparative3,literal3
+//comparative3,NOT literal3
 comparative3,comparative4
 comparative4,expr < expr
 comparative4,expr <= expr
@@ -128,12 +135,17 @@ conditional,ILLUMINATI CONFIRMED ( comparative ) code_block m WHATCHASAY code_bl
 m,M m
 m,
 
-loop,whileLoop
-loop,doWhileLoop
-loop,forLoop
-whileLoop,WHILE ( comparative ) code_block
-doWhileLoop,DO code_block WHILE ( comparative ) !
-forLoop,FOR ( varDec ; comparative ; assignment ) code_block
+loop,SMOKE WEED code_block EVERYDAY ( comparative )
+loop,EVERYDAY ( comparative ) code_block
+loop,FOR TWENTY ( varDec ; comparative ; assignment ) code_block
+
+//DECLARING arrays
+arrDec,arrDimens
+arrDimens,[ arrVals ] arrDimens
+arrDimens,[ arrVals ]
+arrVals,expr &com; arrVals
+arrVals,expr
+arrVals,
 
 //fixed
 //arrDec,dataType arrIndex = arrAssignment !

@@ -23,9 +23,21 @@ public class NonCondCodeSegment extends NonTerminal {
 				printIndent("!");
 				put("line",nt);
 				break;
+			case "constDec !":
+				type = "constDec";
+				nt = (NonTerminal) getComponent("constDec");
+				propagate(nt);
+				nt.interpret();
+				printIndent("!");
+				put("line",nt);
+				break;
 			case "arrDec !":
 				type = "arrDec";
+				nt = (NonTerminal) getComponent("arrDec");
+				propagate(nt);
+				nt.interpret();
 				printIndent("!");
+				put("line",nt);
 				break;
 			case "assignment !":
 				type = "assignment";
@@ -45,6 +57,15 @@ public class NonCondCodeSegment extends NonTerminal {
 				break;
 			case "loop":
 				type = "loop";
+				nt = (NonTerminal) getComponent("loop");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
+				break;
+			case "fuckTheUniverse !":
+				type = "fuckTheUniverse !";
+				printIndent("fuckTheUniverse");
+				printIndent("!");
 				break;
 			case "!":
 				type = "!";

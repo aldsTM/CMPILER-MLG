@@ -17,9 +17,9 @@ public class Conditional extends NonTerminal {
 		CodeBlock nt2, nt4;
 		NonTerminal nt5;
 		CodeSegment[] cs, cs2;
+		printBranch();
 		switch(getProdString()) {
 			case "ILLUMINATI CONFIRMED ( comparative ) code_block":
-				System.out.println("FIRST CASE!");
 				printIndent("ILLUMINATI");
 				printIndent("CONFIRMED");
 				printIndent("(");
@@ -40,7 +40,6 @@ public class Conditional extends NonTerminal {
 				}
 				break;
 			case "ILLUMINATI CONFIRMED ( comparative ) code_block m WHATCHASAY conditional":
-				System.out.println("SECOND CASE!");
 				printIndent("ILLUMINATI");
 				printIndent("CONFIRMED");
 				printIndent("(");
@@ -73,7 +72,6 @@ public class Conditional extends NonTerminal {
 
 				break;
 			case "ILLUMINATI CONFIRMED ( comparative ) code_block m WHATCHASAY code_block":
-				System.out.println("THIRD CASE!");
 				printIndent("ILLUMINATI");
 				printIndent("CONFIRMED");
 				printIndent("(");
@@ -120,6 +118,8 @@ public class Conditional extends NonTerminal {
 			st.pushContext();
 			if( comparative.getAsBoolean("val") ) {
 				run(codes);
+			} else if (nonTerminal != null) {
+				nonTerminal.execute();
 			} else {
 				run(codes2);
 			}
@@ -130,9 +130,9 @@ public class Conditional extends NonTerminal {
 								+ comparative.getAsInt("lineNo"));
 		}
 
-		if (nonTerminal != null){
-			nonTerminal.execute();
-		}
+		// if (nonTerminal != null){
+		// 	nonTerminal.execute();
+		// }
 
 	}
 
