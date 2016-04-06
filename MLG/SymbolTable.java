@@ -1,16 +1,15 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Stack;
 
 public class SymbolTable {
 	private static SymbolTable instance = null;
-	private ArrayList<HashMap<String,Variable>> map;
-	private ArrayList<HashMap<String,Variable>> map2;
-	private boolean isSwitched;
+	private Stack<ArrayList<HashMap<String,Variable>>> stack;
+	private Stack<String> tags;
 
 	private SymbolTable() {
-		map = new ArrayList<HashMap<String,Variable>>();
-		map2 = new ArrayList<HashMap<String,Variable>>();
-		isSwitched = false;
+		stack = new Stack<ArrayList<HashMap<String,Variable>>>();
+		tags = new Stack<String>();
 	}
 
 	public static SymbolTable instance() {
@@ -21,7 +20,7 @@ public class SymbolTable {
 	}
 
 	private ArrayList<HashMap<String,Variable>> getMap() {
-		return isSwitched ? map2 : map;
+		return stack.peek();
 	}
 
 	public void pushContext() {
@@ -34,13 +33,14 @@ public class SymbolTable {
 		map.remove(0);
 	}
 
-	public void switchContext() {
-		isSwitched = !isSwitched;
+	public void pushFrame(String tag) {
+		tags.push(tag);
+		stack.push(new ArrayList<HashMap<String,Variable>>());
 	}
 
-	public void clear() {
-		ArrayList<HashMap<String,Variable>> map = getMap();
-		map.clear();	
+	public void popFrame() {
+		tags.pop();
+		stack.pop();
 	}
 
 	public Variable get(String varname) {
@@ -63,6 +63,47 @@ public class SymbolTable {
 		} else {
 			return false;
 		}
+	}
+
+	public boolean declare(String varname, String type, boolean isConstant) {
+		ArrayList<HashMap<String,Variable>> map = getMap();
+		Variable v = map.get(0).get(varname);
+		if( v == null ) {
+			map.get(0).put(varname,new Variable(type,isConstant));
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public String callStack() {
+		String callStack = "CALL STACK\n";
+		for(int i = 0; i < tags.size(); i++ ) {
+			if( i > 0 ) {
+				callStack += "\n";
+			}
+			callStack += "\t" + tags.get(i);
+		}
+		return callStack;
+	}
+
+	public String symbolTable() {
+		ArrayList<HashMap<String,Variable>> map = getMap();
+		String symbolTable = "SYMBOL TABLE\n";
+		for(int i = 0; i < map.size(); i++) {
+			if( i > 0 && map.get(i).keySet().size() > 0 ) {
+				symbolTable += "\n";
+			}
+			String[] vars = map.get(i).keySet().toArray(new String[0]);
+			for( int j = 0; j < vars.length; j++ ) {
+				if( j > 0 ) {
+					symbolTable += "\n";
+				}
+				symbolTable += "\t" + vars[j] + " - " 
+								+ map.get(i).get(vars[j]).toString();
+			}
+		}
+		return symbolTable;
 	}
 
 	/**

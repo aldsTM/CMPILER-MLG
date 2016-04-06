@@ -1,11 +1,12 @@
 public class Literal2 extends NonTerminal {
+
 	public Literal2(String pattern) {
 		super("literal2",pattern);
 	}
 
 	public void interpret() throws Exception {
-		Token t;
 		String str;
+		Token t;
 		printBranch();
 		switch(getProdString()) {			
 			case "float":

@@ -20,6 +20,8 @@ public class Main extends NonTerminal {
 	}
 
 	public void execute() {
+		SymbolTable st = SymbolTable.instance();
+		st.pushFrame("main");
 		main.execute();
 		funcList.execute();
 	}

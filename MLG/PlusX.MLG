@@ -1,0 +1,92 @@
+/*
+#include <stdio.h>
+
+int main() {
+	char pattern;
+	int dim,i,j;
+	printf("Enter dim: ");
+	do {
+		scanf("%d%*c",&dim);
+		if( dim % 2 == 0 ) {
+			printf("Please enter an odd number: ");
+		}
+	} while( dim % 2 == 0 );
+	printf("X or +? ");
+	do {
+		scanf("%c%*c",&pattern);
+		if( pattern != 'X' && pattern != '+') {
+			printf("Please enter + or X: ");
+		}
+	} while( pattern != 'X' && pattern != '+' );
+
+	if( pattern == 'X' ) {
+		for(i = 0; i < dim; i++) {
+			for( j = 0; j < dim; j++) {
+				if( i == j || i + j == dim - 1) {
+					printf("*");
+				} else {
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+	} else if( pattern == '+') {
+		for(i = 0; i < dim; i++) {
+			for( j = 0; j < dim; j++) {
+				if( j == dim / 2 || i == dim / 2) {
+					printf("*");
+				} else {
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+	}
+}
+*/
+
+PRESS START {
+
+	char pattern = "A"!
+	mmr dim = 0!
+	print("Enter dim: ")!
+	SMOKE WEED {
+		SONG NAME? (mmr,dim)!
+		ILLUMINATI CONFIRMED (dim % 2 == 0){
+			print("Please enter an odd number: ")!
+		}
+	} EVERYDAY (dim%2 == 0)!
+
+	print("X or + ? ")!
+	SMOKE WEED {
+		SONG NAME? (char,pattern)!
+		ILLUMINATI CONFIRMED (pattern != 'X' AND pattern != '+') {
+			print("Please enter either + or X: ")!
+		}
+	} EVERYDAY (pattern != 'X' AND pattern != '+')!
+
+	ILLUMINATI CONFIRMED (pattern == 'X'){
+		FOR TWENTY (mmr i = 0; i < dim; i = i + 1){
+			FOR TWENTY (mmr j = 0; j < dim; j = j + 1){
+				ILLUMINATI CONFIRMED ( i == j OR i + j == dim - 1){
+					print("*")!
+				} M M WHATCHASAY {
+					print(" ")!
+				}
+			}
+			println()!
+		}
+	} M WHATCHASAY ILLUMINATI CONFIRMED (pattern == '+'){
+		FOR TWENTY (mmr i = 0; i < dim; i = i + 1){
+			FOR TWENTY (mmr j = 0; j < dim; j = j + 1){
+				ILLUMINATI CONFIRMED (j == dim / 2 OR i == dim / 2){
+					print("*")!
+				} M WHATCHASAY {
+					print(" ")!
+				}
+			}
+			println()!
+		}
+	}
+	
+}

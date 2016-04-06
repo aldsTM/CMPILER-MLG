@@ -93,6 +93,7 @@ public class Expr2 extends NonTerminal {
 								break;
 							case "float":
 								put("type","float");
+								// put("val",nt.getAsInt("val") * nt2.getAsFloat("val"));
 								put("val",nt.getAsString("val").charAt(0) * nt2.getAsFloat("val"));
 								break;
 							default:

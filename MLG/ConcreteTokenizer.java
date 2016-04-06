@@ -19,7 +19,8 @@ public class ConcreteTokenizer implements Tokenizer {
 			"mmr","kdr","char","SAMPLETEXT","isMLG","SMOKE","WEED","EVERYDAY",
 			"AND","OR","NOT","ELSE","print","println","fuckTheUniverse",
 			"PRESS","START","ILLUMINATI","CONFIRMED","M","WHATCHASAY",
-			"FOR","TWENTY","CANTTOUCHTHIS","SONG","NAME"
+			"FOR","TWENTY","CANTTOUCHTHIS","SONG","NAME","ARRAY","NEW",
+			"DICK","SIZE","INCHES"
 		};
 		operators = new String[] {
 			"(","+","-","[","=","*","/","{","<","<=",">",">=","==","!=","!",

@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.util.*;
 
 public class NonCondCodeSegment extends NonTerminal {
 
@@ -85,6 +86,8 @@ public class NonCondCodeSegment extends NonTerminal {
 	}
 
 	public void execute() {
+		SymbolTable st = SymbolTable.instance();
+		Scanner sc = new Scanner(System.in);
 		NonTerminal nt;
 		if (getProdString().equals("fuckTheUniverse !")){
 			JFrame f = new JFrame("Fuck Da Universe");
@@ -94,10 +97,28 @@ public class NonCondCodeSegment extends NonTerminal {
 			// do nothing; ignore!
 		} else {
 			nt = (NonTerminal) getAsObject("line");
-			try {
-				nt.execute();
-			} catch (Exception e){
-				System.out.println(e.getMessage());
+			if (Driver.LINE_PER_LINE){
+				Driver.cls();
+				System.out.println("\nWarning: LINE_PER_LINE mode activated.");
+				System.out.println("Some functionality, such as input statements, may not work.\n");
+				System.out.println("EXECUTING PRODUCTION");
+				System.out.println("\t" + nt.getClass().getName() + " -> " + nt.getProdString());
+				try {
+					System.out.print("\nCONSOLE OUTPUT FOR THIS LINE (if any)\n\t");
+					nt.execute();
+					System.out.println("\n\n" + st.callStack());					
+					System.out.println("\n" + st.symbolTable());
+					System.out.print("\nPress ENTER to continue...");
+					String temp = (sc.nextLine().trim());
+				} catch (Exception e) {
+					System.out.println("Runtime error: " + e.getMessage());
+				}
+			} else {
+				try {
+					nt.execute();
+				} catch (Exception e){
+					System.out.println("Runtime error: " + e.getMessage());
+				}
 			}
 		}
 	}

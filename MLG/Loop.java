@@ -98,21 +98,83 @@ public class Loop extends NonTerminal {
 		return this.type;
 	}
 
-	public void execute() {
-		switch(type) {
-			case "doWhileLoop":
-				System.out.println("Nice. A Do-While Loop!");
-				break;
-			case "whileLoop":
-				System.out.println("You've typed in a while loop.");
-				break;
-			case "forLoop":
-				System.out.println("You did a for loop.");
-				break;
-			default:
-				System.out.println("That's not a valid loop, asshole.");
-				break;
+	public void execute() {	
+		SymbolTable st = SymbolTable.instance();
+		st.pushContext();	
+		NonTerminal comparative = (NonTerminal) getComponent("comparative");
+
+		if (type.equalsIgnoreCase("forLoop")){
+			NonTerminal assignment = (NonTerminal) getComponent("assignment");
+			NonTerminal varDec = (NonTerminal) getComponent("varDec");
+			varDec.execute();
+			comparative.execute();
+
+			if (comparative.getAsBoolean("val")){
+				while (comparative.getAsBoolean("val")) {
+					run(codes);
+					assignment.execute();
+					comparative.execute();
+				}
+			}
+		} else {
+			comparative.execute();
+			if (comparative.getAsString("type").equals("boolean")){	
+				// st.pushContext();	
+				switch(type) {
+					case "doWhileLoop":
+						if (comparative.getAsBoolean("val")){
+							do {
+								run(codes);
+								comparative.execute();
+							} while (comparative.getAsBoolean("val"));
+						}
+						break;
+					case "whileLoop":
+						if (comparative.getAsBoolean("val")){
+							while (comparative.getAsBoolean("val")) {
+								run(codes);
+								comparative.execute();
+							}
+						}
+						break;
+					default:
+						System.out.println("That's not a valid loop, asshole.");
+						break;
+				}
+			} else {
+				System.out.println("Illegal " + comparative.getAsString("type") 
+									+ " as condition on line " 
+									+ comparative.getAsInt("lineNo"));
+			}
 		}
 
+		st.popContext();
 	}
+
+	public void run(ArrayList<CodeSegment> codes) {
+		boolean stop = false;
+		for(CodeSegment cl: codes) {
+			switch( cl.getType() ) {
+				case "return":
+					put("status","return");
+					put("lineNo",cl.getAsInt("lineNo"));
+					break;
+				default:
+					cl.execute();
+					Object status;
+					if( (status = cl.getAsObject("status")) != null ) {
+						switch(status.toString()) {
+						 	case "return":
+						 		put("status","return");
+						 		put("lineNo",cl.getAsInt("lineNo"));
+								break;
+						 }
+					}
+			}
+			if( stop ) {
+				break;
+			}
+		}
+	}
+
 }

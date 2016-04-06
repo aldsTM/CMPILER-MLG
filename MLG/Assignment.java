@@ -14,6 +14,7 @@ public class Assignment extends NonTerminal {
 				t = (Token) getComponent("IDENTIFIER");
 				printIndent(t.token());
 				put("IDENTIFIER",t.token());
+				put("variable",t);
 
 				printIndent("=");
 
@@ -27,6 +28,7 @@ public class Assignment extends NonTerminal {
 				t = (Token) getComponent("IDENTIFIER");
 				printIndent(t.token());
 				put("IDENTIFIER",t.token());
+				put("variable",t);
 
 				printIndent("=");
 
@@ -43,6 +45,7 @@ public class Assignment extends NonTerminal {
 				t = (Token) getComponent("IDENTIFIER");
 				printIndent(t.token());
 				put("IDENTIFIER",t.token());
+				put("variable",t);
 
 				printIndent("=");
 
@@ -76,9 +79,10 @@ public class Assignment extends NonTerminal {
 				typeOfVariable = v.type();
 			}
 		} else {
+			// System.out.println(" SHIT " + getAsString("IDENTIFIER") + " " + getAsString("type"));
 			if(!st.declare(getAsString("IDENTIFIER"),getAsString("type"))) {
-				System.out.println("Error: " + getAsString("varname") 
-										+ " already declared");
+				// System.out.println("Type checking error: " + getAsString("varname") 
+				// 						+ " already declared");
 			}
 		}
 
@@ -86,6 +90,8 @@ public class Assignment extends NonTerminal {
 			System.out.println("Did an assignment statement! This type of assignment is not supported yet, though");
 			// handle this later
 		} else {
+			// System.out.println("Type of variable = " + typeOfVariable);
+			// System.out.println("Type of expr = " + typeOfExpr);
 			switch(typeOfVariable){
 				case "int":
 					switch (typeOfExpr){
@@ -184,13 +190,13 @@ public class Assignment extends NonTerminal {
 							put("val",""+(char)nt.getAsFloat("val"));
 							break;
 						case "char":
-							st.assign(getAsString("IDENTIFIER"),nt.getAsString("val"));
-							put("val",nt.getAsString("val"));
+							st.assign(getAsString("IDENTIFIER"),nt.getAsString("val").charAt(0));
+							put("val",nt.getAsString("val").charAt(0));
 							break;
 						case "string":
 							String temp = nt.getAsString("val");
 							if( temp.length() == 1 ) {
-								st.assign(getAsString("IDENTIFIER"),temp);
+								st.assign(getAsString("IDENTIFIER"),temp.charAt(0));
 								put("val",temp);
 							} else {
 							System.out.println("Type Checking Error: " 

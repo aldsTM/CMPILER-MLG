@@ -1,9 +1,19 @@
 public class Variable {
 	private String type;
 	private Object value;
+	private boolean isConstant;
+	private boolean isVirgin;
 
-	public Variable(String type) {
+	public Variable(String type){
 		this.type = type;
+		this.isConstant = false;
+		this.isVirgin = true;
+	}
+
+	public Variable(String type, boolean isConstant) {
+		this.type = type;
+		this.isConstant = isConstant;
+		this.isVirgin = true;
 	}
 
 	public String type() {
@@ -16,7 +26,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(boolean value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -25,7 +41,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(int value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -34,7 +56,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(float value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -43,7 +71,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(double value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -52,7 +86,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(long value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -61,7 +101,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(String value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -70,7 +116,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(Object value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -79,7 +131,13 @@ public class Variable {
 	 * @param value to store
 	 */
 	public void put(Object[] value) {
-		this.value = value;
+		if (!isConstant || (isConstant && isVirgin == true)){
+			this.value = value;
+			isVirgin = false;
+		} else {
+			System.out.println("Type checking error: Can't assign value " + 
+								value + " to a constant");
+		}
 	}
 
 	/**
@@ -125,6 +183,15 @@ public class Variable {
 	 */
 	public long getAsLong() {
 		return (long)value;
+	}
+
+	/**
+	 * Returns the value of this variable
+	 * @param key key of value
+	 * @return value stored
+	 */
+	public char getAsChar() {
+		return (char)getAsInt();
 	}
 
 	/**

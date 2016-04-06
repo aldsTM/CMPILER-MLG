@@ -1,6 +1,48 @@
 PRESS START {
-	
-	fuckTheUniverse!
+
+	/*
+	char pattern = '$'!
+	print("Enter a random character: ")!
+	SONG NAME? (char, pattern)!
+	println("Your character is '" + pattern + "'.")!
+
+	SAMPLETEXT userInput!
+	print("Enter your username: ")!
+	SONG NAME? (SAMPLETEXT, userInput)!
+	println("Hello, " + userInput + "!")!
+	*/
+
+	mmr [] bullshitArray!
+	SAMPLETEXT [] varListArr = NEW DICK SIZE [5] INCHES!
+	mmr [] fuckingArraysMan = {1,2,3}!
+
+	SAMPLETEXT [] songTitles = {
+		"Introduction",
+		"The Only Difference Between Martyrdom and Suicide Is Press Coverage",
+		"London Beckoned Songs About Money Written By Machines",
+		"Nails For Breakfast, Tacks for Snacks",
+		"Camisado",
+		"Time to Dance",
+		"Lying Is The Most Fun A Girl Can Have Without Taking Her Clothes Off",
+		"Intermission",
+		"But It's Better If You Do",
+		"I Write Sins Not Tragedies",
+		"I Constantly Thank God For Esteban",
+		"There's A Good Reason These Tables Are Numbered Honey, You Just Haven't Thought Of It Yet",
+		"Build God, Then We'll Talk"
+	}!
+
+	mmr x = 1!
+	println(songTitles[fuckingArraysMan[fuckingArraysMan[x]]])!
 	println()!
 
+	FOR TWENTY (mmr i = 0; i < 13; i = i + 1){
+		print((i+1) + " = ")!
+		println(songTitles[i])!
+	}
+	
+}
+
+mmr func1(){
+	println()!
 }

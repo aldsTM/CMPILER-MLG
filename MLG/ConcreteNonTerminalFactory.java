@@ -44,6 +44,8 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 				return new Expr4(pattern);
 			case "expr5":
 				return new Expr5(pattern);
+			case "arrIndex":
+				return new ArrIndex(pattern);
 			case "literal":
 				return new Literal(pattern);
 			case "literal2":
@@ -78,8 +80,13 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 				return new Loop(pattern);
 			case "arrDec":
 				return new ArrDec(pattern);
-			case "arrDimens":
-				return new ArrDimens(pattern);
+			case "arrAssignment":
+				return new ArrAssignment(pattern);
+			case "arrSize":
+				return new ArrSize(pattern);
+			// only activate if support for multi-dimensional arrays is intended
+			// case "arrValues":
+			// 	return new ArrValues(pattern);
 			case "arrVals":
 				return new ArrVals(pattern);
 			default:

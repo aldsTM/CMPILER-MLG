@@ -61,18 +61,23 @@ public class FuncCall extends NonTerminal {
 			case "print ( expr )":
 				nt = (NonTerminal) getAsObject("line");
 				nt.execute();
-				System.out.print(getAsObject("line"));
+				if (getAsObject("line") != null){
+					System.out.print(getAsObject("line"));
+				}
 				break;
 			case "println ( expr )":
 				nt = (NonTerminal) getAsObject("line");
 				nt.execute();
-				System.out.println(getAsObject("line"));
+				if (getAsObject("line") != null){
+					System.out.println(getAsObject("line"));	
+				}
 				break;
 			case "println ( )":
 				System.out.println();
 				break;
 			case "scanf":
-				System.out.println("Scanf statement done");
+				nt = (NonTerminal) getAsObject("line");
+				nt.execute();
 				break;
 			default:
 		}

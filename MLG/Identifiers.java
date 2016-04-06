@@ -28,6 +28,7 @@ public class Identifiers extends NonTerminal {
 				for (ParseObject po : varListArr){
 					varList.add(po);
 				}
+
 				put("varList",varList.toArray(new ParseObject[1]));
 				break;
 			case "assignment , identifiers":
@@ -45,13 +46,14 @@ public class Identifiers extends NonTerminal {
 				for (ParseObject po : varListArr){
 					varList.add(po);
 				}
+
 				put("varList",varList.toArray(new ParseObject[1]));
 				break;
 			case "IDENTIFIER":
 				printIndent(((Token)getComponent("IDENTIFIER")).token());
 				put("varList",new ParseObject[]{getComponent("IDENTIFIER")});
-				//varList.add(getComponent("IDENTIFIER"));
-				//put("varList",varList.toArray(new ParseObject[1]));
+				// varList.add(getComponent("IDENTIFIER"));
+				// put("varList",varList.toArray(new ParseObject[1]));
 
 				//t = (Token) getComponent("IDENTIFIER");
 				//String str = t.token();

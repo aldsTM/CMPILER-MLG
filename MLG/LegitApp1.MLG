@@ -1,0 +1,26 @@
+/* 
+can you translate the following into MLG?
+
+#include <stdio.h>
+
+int main() {
+	int base, height;
+	printf("Enter base: ");
+	scanf("%d",&base);
+	printf("Enter height: ");
+	scanf("%d",&height);
+	printf("Triangle Area: %f\n", base * height / 2.0);
+	printf("Rectangle Perimeter: %d\n", 2 * (base + height));
+	printf("Rectangle Area: %d\n", base * height);
+} */
+
+PRESS START {
+	mmr base, height!
+	print("Enter base: ")!
+	SONG NAME? (mmr, base)!
+	print("Enter height: ")!
+	SONG NAME? (mmr, height)!
+	println("Area of a triangle: " + base*height/2.0)!
+	println("Perimeter of a rectangle: " + 2*(base+height))!
+	println("Area of a parallelogram: " + base*height)!
+}

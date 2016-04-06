@@ -8,16 +8,12 @@ public class Expr5 extends NonTerminal {
 		printBranch();
 		switch(getProdString()) {
 			case "++ IDENTIFIER":
-
 				break;
 			case "-- IDENTIFIER":
-
 				break;
 			case "IDENTIFIER ++":
-
 				break;
 			case "IDENTIFIER --":
-
 				break;
 			case "literal":
 				nt = (NonTerminal) getComponent("literal");
@@ -49,14 +45,27 @@ public class Expr5 extends NonTerminal {
 				printIndent(((Token)getComponent("IDENTIFIER")).token());
 				put("lineNo",((Token)getComponent("IDENTIFIER")).lineNo());
 				break;
-			case "IDENTIFIER arrIndex":
+			case "IDENTIFIER [ arrIndex ]":
+				put("IDENTIFIER",((Token)getComponent("IDENTIFIER")).token());
+				printIndent(((Token)getComponent("IDENTIFIER")).token());
+				put("lineNo",((Token)getComponent("IDENTIFIER")).lineNo());
+
+				printIndent("[");
+				nt = (NonTerminal) getComponent("arrIndex");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
+				printIndent("]");
+
 				break;
 			default:
 		}
 	}
 
 	public void execute() {
+		SymbolTable st;
 		NonTerminal nt;
+		Variable v;
 		switch(getProdString()) {
 			case "++ IDENTIFIER":
 				break;
@@ -122,8 +131,8 @@ public class Expr5 extends NonTerminal {
 				}
 				break;
 			case "IDENTIFIER":
-				SymbolTable st = SymbolTable.instance();
-				Variable v = st.get(getAsString("IDENTIFIER"));
+				st = SymbolTable.instance();
+				v = st.get(getAsString("IDENTIFIER"));
 				put("type",v.type());
 				switch(getAsString("type")) {
 					case "int":
@@ -136,7 +145,7 @@ public class Expr5 extends NonTerminal {
 						break;
 					case "char":
 						put("type",v.type());
-						put("val",v.getAsString());
+						put("val",(char)v.getAsInt() + "");
 						break;
 					case "string":
 						put("type",v.type());
@@ -153,8 +162,44 @@ public class Expr5 extends NonTerminal {
 					default:
 				}
 				break;
-			//case "IDENTIFIER arrIndex":
-			//	break;
+			case "IDENTIFIER [ arrIndex ]":
+				st = SymbolTable.instance();
+				v = st.get(getAsString("IDENTIFIER"));
+				put("type",v.type());
+
+				nt = (NonTerminal) getAsObject("line");
+				nt.execute();
+				int i = nt.getAsInt("val");
+
+				Object[] tempArray = v.getAsArray();
+				if (i < tempArray.length){
+					switch(getAsString("type")) {
+						case "int":
+							put("type",v.type());
+							put("val",Integer.parseInt(tempArray[i].toString()));
+							break;
+						case "float":
+							put("type",v.type());
+							put("val",Float.parseFloat(tempArray[i].toString()));
+							break;
+						case "char":
+							put("type",v.type());
+							put("val",tempArray[i].toString().charAt(0));
+							break;
+						case "string":
+							put("type",v.type());
+							put("val",tempArray[i].toString());
+							break;
+						case "boolean":
+							put("type",v.type());
+							put("val",tempArray[i].toString().equalsIgnoreCase("true"));
+							break;
+						default:
+					}
+				} else {
+					put("val","Syntax error: Index exceeds max number of elements.");
+				}
+				break;
 			default:
 		}
 	}

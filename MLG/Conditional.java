@@ -130,10 +130,6 @@ public class Conditional extends NonTerminal {
 								+ comparative.getAsInt("lineNo"));
 		}
 
-		// if (nonTerminal != null){
-		// 	nonTerminal.execute();
-		// }
-
 	}
 
 	public void run(ArrayList<CodeSegment> codes) {

@@ -73,7 +73,11 @@ expr5,literal3
 expr5,NOT literal3
 //expr5,( comparative )
 expr5,IDENTIFIER
-//expr5,IDENTIFIER arrIndex
+expr5,IDENTIFIER [ arrIndex ]
+
+arrIndex,int
+arrIndex,IDENTIFIER
+arrIndex,IDENTIFIER [ arrIndex ]
 
 //changed
 literal,int
@@ -94,7 +98,7 @@ funcCall,println ( expr )
 funcCall,println ( )
 funcCall,scanf
 
-scanf,SONG NAME ? ( dataType )
+scanf,SONG NAME ? ( dataType &com; IDENTIFIER )
 
 //fixed
 funcCallParams,expr
@@ -140,21 +144,22 @@ loop,EVERYDAY ( comparative ) code_block
 loop,FOR TWENTY ( varDec ; comparative ; assignment ) code_block
 
 //DECLARING arrays
-arrDec,arrDimens
-arrDimens,[ arrVals ] arrDimens
-arrDimens,[ arrVals ]
+arrDec,dataType [ ] IDENTIFIER
+arrDec,dataType [ ] arrAssignment
+
+arrAssignment,IDENTIFIER = NEW DICK SIZE arrSize INCHES
+arrAssignment,IDENTIFIER = { arrVals }
+arrSize,[ int ]
 arrVals,expr &com; arrVals
 arrVals,expr
-arrVals,
 
-//fixed
-//arrDec,dataType arrIndex = arrAssignment !
-//arrIndex,[ expr ] arrIndex
-//arrIndex,[ expr ]
+// only activate these if we plan to support multi-dimensional arrays
+//arrAssignment,IDENTIFIER = arrValues
 
-//unresolvable conflict. Just check in SDT if expr ends up as an INT
-//arrDec,dataType [ expr ] = identifiers !
-//arrDec,dataType [ expr ] = arrAssignment !
 
-//arrAssignment,expr
-//arrAssignment,expr &com; arrAssignment
+//arrSize,[ int ] arrSize
+//arrSize,[ int ]
+
+// arrValues,{ arrVals }
+//arrValues,{ arrVals } arrValues
+//arrValues,{ arrVals }

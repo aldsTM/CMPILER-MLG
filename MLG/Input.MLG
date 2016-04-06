@@ -22,9 +22,6 @@ PRESS START {
 	SAMPLETEXT str, str2!
 	isMLG sampleBoolVar, sampleBoolVar2!
 	
-	// Constant Declaration
-	CANTTOUCHTHIS mmr MAX_MLG_SKEELZ = 420!
-	
 	// Assignment
 	luigi = 4000!
 	miguel = 2900!
@@ -35,12 +32,9 @@ PRESS START {
 
 	// QA shit; surprise test case!
 	kdr alds!
-	println("alds value = " + alds!)
+	println("alds value = " + alds)!
 
 	x = y = z = 500!
-	
-	// Input Statement
-	SAMPLETEXT userInput = SONG NAME?(SAMPLETEXT)!
 
 	// Output Statement
 	print("Luigi's MMR in Dota 2 is " + luigi + " ")!
@@ -111,37 +105,60 @@ PRESS START {
 			println("ILLUMINATI CONFIRMED")!
 		}
 
-	/* IMPORTANT NOTE: From this point onward, the code is NOT interpreted; only parsed. */
-	/* DO NOT expect the following code to actually RUN */
-	println()!
-	
 	// Iterative Statements
 		
 		// Event-controlled loop (WHILE loop)
-		EVERYDAY ( B < 5000 ){
-			println("I'm shuffling!")!
+		println("B before WHILE loop = " + B)!
+		EVERYDAY ( B < 5010 ){
 			B = B + 2!
+			println("B is now " + B)!
 		}
-		
-		// Count-controlled loop (FOR loop)
-		B = 4997!
-		FOR TWENTY ( mmr i = 1 ; i <= 10 ; i = i + 1 ) {
-			println("B = " + B)!
-		}
-		
+		println("\n")!
+
 		// Repeat-until loop
 		A = 8995!
+		println("A before DO-WHILE loop = " + A)!
 		SMOKE WEED {
 			ILLUMINATI CONFIRMED (A == 8995){
 				print("SMOKE WEED EVERYDAY! ")!
 			} M WHATCHASAY {
-				print("AY-eh-eh-eh-AY")!
+				print("AY-eh-eh-eh-AY ")!
 			}
 			A = A + 1!
-			println(" A = " + A)!
+			ILLUMINATI CONFIRMED (A < 9000) {
+				print("A = " + A + " ")!
+			} M M WHATCHASAY {
+				println("A = " + A + " ")!
+			}
 		} EVERYDAY ( A < 9000)!
+		println("\n")!
+		
+		// Count-controlled loop (FOR loop)
+		B = 2!
+		println("Initial value before FOR loop = " + B)!
+		FOR TWENTY ( mmr i = 1 ; i <= 20 ; i = i + 1 ) {
+			println("(2^" + i + ") = " + B)!
+			B = B * 2!
+		}
+		println("\n")!
+
+	// Constant Declaration
+	CANTTOUCHTHIS mmr niSirThomas = 50000000!
+	print("mmr ni Sir Thomas = " )!
+	println(niSirThomas)!
+
 	
-	
+
+	println("\n\n\n\t" +
+			"IMPORTANT NOTE: From this point onward, the productions are NOT interpreted; only parsed.\n\t" +
+			"DO NOT expect the following code to actually RUN" +
+			"\n\n")!
+	/* IMPORTANT NOTE: From this point onward, the productions are NOT interpreted; only parsed. */
+	/* DO NOT expect the following code to actually RUN */
+	println()!
+
+
+
 	// Functions / Methods
 	/* ALL FUNCTIONS ARE DECLARED AFTER THE MAIN FUNCTION */
 	/* THOSE FUNCTIONS, WHEN RAN, DISPLAY RECURSION, AND CAN CALL OTHER FUNCTIONS
@@ -150,10 +167,12 @@ PRESS START {
 
 		// Function Call
 		sampleFunction(SampleBooleanVar)!
-	
+
 	// Arrays
-	// Sample Declaration
-	[1,2,3,4,5,6,7,8,9,10]!
+		// Sample Declarations
+		mmr[] arrayX!
+		kdr[] arrayOfKDRs = NEW DICK SIZE [6] INCHES!
+		kdr[] arrrrrrKDR = [123,456]!
 
 	println()!
 

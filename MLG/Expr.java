@@ -315,7 +315,7 @@ public class Expr extends NonTerminal {
 	}
 
 	public String toString(){
-		return getAsObject("val").toString();
+		return getAsObject("val") == null ? null : getAsObject("val").toString();
 	}
 
 }

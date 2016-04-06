@@ -13,6 +13,7 @@ public class ConstDec extends NonTerminal {
 		printBranch();
 		switch(getProdString()) {
 			case "CANTTOUCHTHIS dataType assignment":
+				printIndent("CANTTOUCHTHIS");
 
 				nt = (NonTerminal) getComponent("dataType");
 				propagate(nt);
@@ -29,12 +30,22 @@ public class ConstDec extends NonTerminal {
 	}
 
 	public void execute() {
-		System.out.println("You've declared a constant. BUT it's not officially in memory yet (function not implemented)");
-		// SymbolTable st = SymbolTable.instance();
+		SymbolTable st = SymbolTable.instance();
+		NonTerminal assignment = (NonTerminal) varList.get(0);
+		Token t = (Token) assignment.getAsObject("variable");
+		
+		boolean ok = st.declare(t.token(),getAsString("type"),true);
+		if( !ok ) {
+			System.out.println(t.token() + " already declared at line " 
+								+ t.lineNo());
+		}
+
+		assignment.execute();
+
 		// for(ParseObject var : varListArr) {
 		// 	if( var instanceof Token ) {
 		// 		Token t = (Token) var;
-		// 		boolean ok = st.declare(t.token(),getAsString("type"));
+		// 		boolean ok = st.declare(t.token(),getAsString("type"),true);
 		// 		if( !ok ) {
 		// 			System.out.println(t.token() + " already declared at line " 
 		// 								+ t.lineNo());
