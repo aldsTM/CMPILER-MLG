@@ -12,6 +12,7 @@ PRESS START {
 	println("Hello, " + userInput + "!")!
 	*/
 
+
 	mmr [] bullshitArray!
 	SAMPLETEXT [] varListArr = NEW DICK SIZE [5] INCHES!
 	mmr [] fuckingArraysMan = {1,2,3}!
@@ -33,16 +34,36 @@ PRESS START {
 	}!
 
 	mmr x = 1!
-	println(songTitles[fuckingArraysMan[fuckingArraysMan[x]]])!
+	println(songTitles[fuckingArraysMan[x]] + "!")!
 	println()!
 
 	FOR TWENTY (mmr i = 0; i < 13; i = i + 1){
 		print((i+1) + " = ")!
 		println(songTitles[i])!
 	}
-	
+
+	func1()!
+	func2()!
+	func3()!
+	func1()!
+
 }
 
 mmr func1(){
-	println()!
+	mmr x!
+	x = 5!
+	println("x func 1 =" + x)!
 }
+
+SAMPLETEXT func2(){
+	SAMPLETEXT x!
+	x = "The fear of falling apart!"!
+	println("x func 2 = " + x)!
+}
+
+mmr func3(){
+	mmr x!
+	x = 6!
+	println("x func 3 =" + x)!
+}
+

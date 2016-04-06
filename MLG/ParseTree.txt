@@ -228,14 +228,12 @@ main
                     |- println
                     |- (
                     |- expr
-                      |- expr2
-                        |- expr3
-                          |- expr4
-                            |- expr5
-                              |- songTitles
-                              |- [
-                              |- arrIndex
-                                |- fuckingArraysMan
+                      |- expr
+                        |- expr2
+                          |- expr3
+                            |- expr4
+                              |- expr5
+                                |- songTitles
                                 |- [
                                 |- arrIndex
                                   |- fuckingArraysMan
@@ -244,7 +242,13 @@ main
                                     |- x
                                   |- ]
                                 |- ]
-                              |- ]
+                      |- +
+                      |- expr2
+                        |- expr3
+                          |- expr4
+                            |- expr5
+                              |- literal2
+                                |- "!"
                     |- )
                   |- !
               |- code
@@ -373,6 +377,42 @@ main
                               |- code
                           |- }
                   |- code
+                    |- code_segment
+                      |- non_cond_code_segment
+                        |- funcCall
+                          |- func1
+                          |- (
+                          |- funcCallParams
+                          |- )
+                        |- !
+                    |- code
+                      |- code_segment
+                        |- non_cond_code_segment
+                          |- funcCall
+                            |- func2
+                            |- (
+                            |- funcCallParams
+                            |- )
+                          |- !
+                      |- code
+                        |- code_segment
+                          |- non_cond_code_segment
+                            |- funcCall
+                              |- func3
+                              |- (
+                              |- funcCallParams
+                              |- )
+                            |- !
+                        |- code
+                          |- code_segment
+                            |- non_cond_code_segment
+                              |- funcCall
+                                |- func1
+                                |- (
+                                |- funcCallParams
+                                |- )
+                              |- !
+                          |- code
   |- }
 |- funcList
   |- funcDec
@@ -385,11 +425,158 @@ main
     |- code
       |- code_segment
         |- non_cond_code_segment
-          |- funcCall
-            |- println
-            |- (
-            |- )
+          |- varDec
+            |- dataType
+              |- mmr
+            |- identifiers
+              |- x
           |- !
       |- code
+        |- code_segment
+          |- non_cond_code_segment
+            |- assignment
+              |- x
+              |- =
+              |- expr
+                |- expr2
+                  |- expr3
+                    |- expr4
+                      |- expr5
+                        |- literal
+                          |- 5
+            |- !
+        |- code
+          |- code_segment
+            |- non_cond_code_segment
+              |- funcCall
+                |- println
+                |- (
+                |- expr
+                  |- expr
+                    |- expr2
+                      |- expr3
+                        |- expr4
+                          |- expr5
+                            |- literal2
+                              |- "x func 1 ="
+                  |- +
+                  |- expr2
+                    |- expr3
+                      |- expr4
+                        |- expr5
+                          |- x
+                |- )
+              |- !
+          |- code
     |- }
   |- funcList
+    |- funcDec
+      |- dataType
+        |- SAMPLETEXT
+      |- func2
+      |- (
+      |- )
+      |- {
+      |- code
+        |- code_segment
+          |- non_cond_code_segment
+            |- varDec
+              |- dataType
+                |- SAMPLETEXT
+              |- identifiers
+                |- x
+            |- !
+        |- code
+          |- code_segment
+            |- non_cond_code_segment
+              |- assignment
+                |- x
+                |- =
+                |- expr
+                  |- expr2
+                    |- expr3
+                      |- expr4
+                        |- expr5
+                          |- literal2
+                            |- "The fear of falling apart!"
+              |- !
+          |- code
+            |- code_segment
+              |- non_cond_code_segment
+                |- funcCall
+                  |- println
+                  |- (
+                  |- expr
+                    |- expr
+                      |- expr2
+                        |- expr3
+                          |- expr4
+                            |- expr5
+                              |- literal2
+                                |- "x func 2 = "
+                    |- +
+                    |- expr2
+                      |- expr3
+                        |- expr4
+                          |- expr5
+                            |- x
+                  |- )
+                |- !
+            |- code
+      |- }
+    |- funcList
+      |- funcDec
+        |- dataType
+          |- mmr
+        |- func3
+        |- (
+        |- )
+        |- {
+        |- code
+          |- code_segment
+            |- non_cond_code_segment
+              |- varDec
+                |- dataType
+                  |- mmr
+                |- identifiers
+                  |- x
+              |- !
+          |- code
+            |- code_segment
+              |- non_cond_code_segment
+                |- assignment
+                  |- x
+                  |- =
+                  |- expr
+                    |- expr2
+                      |- expr3
+                        |- expr4
+                          |- expr5
+                            |- literal
+                              |- 6
+                |- !
+            |- code
+              |- code_segment
+                |- non_cond_code_segment
+                  |- funcCall
+                    |- println
+                    |- (
+                    |- expr
+                      |- expr
+                        |- expr2
+                          |- expr3
+                            |- expr4
+                              |- expr5
+                                |- literal2
+                                  |- "x func 3 ="
+                      |- +
+                      |- expr2
+                        |- expr3
+                          |- expr4
+                            |- expr5
+                              |- x
+                    |- )
+                  |- !
+              |- code
+        |- }
+      |- funcList

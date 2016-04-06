@@ -52,7 +52,7 @@ public class ArrDec extends NonTerminal {
 		switch (getProdString()){
 			case "dataType [ ] IDENTIFIER":
 				t = (Token) getComponent("IDENTIFIER");
-				ok = st.declare(t.token(),getAsString("type"));
+				ok = st.declare(t.token(),getAsString("type") + "[]");
 				if ( !ok ){
 					System.out.println(t.token() + " already declared at line " 
 										+ t.lineNo());
@@ -61,7 +61,7 @@ public class ArrDec extends NonTerminal {
 			case "dataType [ ] arrAssignment":
 				NonTerminal assignment = (NonTerminal) varList.get(0);
 				t = (Token) assignment.getAsObject("variable");
-				ok = st.declare(t.token(),getAsString("type"));
+				ok = st.declare(t.token(),getAsString("type") + "[]");
 				if ( !ok ){
 					System.out.println(t.token() + " already declared at line " 
 										+ t.lineNo());

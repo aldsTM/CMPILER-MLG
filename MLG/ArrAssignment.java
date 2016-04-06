@@ -68,7 +68,7 @@ public class ArrAssignment extends NonTerminal {
 									//+ " at line " 
 									//+ getAsInt("lineNo"));
 			} else {
-				typeOfVariable = v.type();
+				typeOfVariable = v.type().replaceAll("\\[\\]","");
 			}
 		} else {
 			if(!st.declare(getAsString("IDENTIFIER"),getAsString("type"))) {

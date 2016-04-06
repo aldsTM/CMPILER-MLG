@@ -136,27 +136,21 @@ public class Expr5 extends NonTerminal {
 				put("type",v.type());
 				switch(getAsString("type")) {
 					case "int":
-						put("type",v.type());
 						put("val",v.getAsInt());
 						break;
 					case "float":
-						put("type",v.type());
 						put("val",v.getAsFloat());
 						break;
 					case "char":
-						put("type",v.type());
 						put("val",(char)v.getAsInt() + "");
 						break;
 					case "string":
-						put("type",v.type());
 						put("val",v.getAsString());
 						break;
 					case "boolean":
-						put("type",v.type());
 						put("val",v.getAsBoolean());
 						break;
 					case "array":
-						put("type",v.type());
 						put("val",v.getAsArray());
 						break;
 					default:
@@ -165,7 +159,7 @@ public class Expr5 extends NonTerminal {
 			case "IDENTIFIER [ arrIndex ]":
 				st = SymbolTable.instance();
 				v = st.get(getAsString("IDENTIFIER"));
-				put("type",v.type());
+				put("type",v.type().replaceAll("\\[\\]",""));
 
 				nt = (NonTerminal) getAsObject("line");
 				nt.execute();
@@ -175,23 +169,18 @@ public class Expr5 extends NonTerminal {
 				if (i < tempArray.length){
 					switch(getAsString("type")) {
 						case "int":
-							put("type",v.type());
 							put("val",Integer.parseInt(tempArray[i].toString()));
 							break;
 						case "float":
-							put("type",v.type());
 							put("val",Float.parseFloat(tempArray[i].toString()));
 							break;
 						case "char":
-							put("type",v.type());
 							put("val",tempArray[i].toString().charAt(0));
 							break;
 						case "string":
-							put("type",v.type());
 							put("val",tempArray[i].toString());
 							break;
 						case "boolean":
-							put("type",v.type());
 							put("val",tempArray[i].toString().equalsIgnoreCase("true"));
 							break;
 						default:

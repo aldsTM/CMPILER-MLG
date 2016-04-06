@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Driver {
 
 	public static final boolean SHOW_TREE = true;
-	public static final boolean CHECK_CFG = false;
+	public static boolean CHECK_CFG = false;
 	public static boolean LINE_PER_LINE = false;
 	public static PrintWriter pw;
 
@@ -14,10 +14,15 @@ public class Driver {
 									new FileReader(
 										new File(args[args.length-1])));
 
-			if (args.length > 1 && args[0].equalsIgnoreCase("-l")) {
-				LINE_PER_LINE = true;
-			} else {
-				LINE_PER_LINE = false;
+			if (args.length > 1){
+				for (int i = 0; i < args.length; i++){
+					if (args[i].equalsIgnoreCase("-l")){
+						LINE_PER_LINE = true;
+					}
+					if (args[i].equalsIgnoreCase("-cfg")){
+						CHECK_CFG = true;
+					}
+				}
 			}
 
 			String code = "";

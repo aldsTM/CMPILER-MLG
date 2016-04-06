@@ -24,5 +24,6 @@ public class Main extends NonTerminal {
 		st.pushFrame("main");
 		main.execute();
 		funcList.execute();
+		st.popFrame();
 	}
 }

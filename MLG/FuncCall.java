@@ -57,6 +57,12 @@ public class FuncCall extends NonTerminal {
 		switch(getProdString()) {
 			case "IDENTIFIER ( funcCallParams )":
 				System.out.println("You called a user-defined function.");
+				//get from singleton the function object
+				//getParams and getParamTypes
+				//pushFrame, pushContext
+				//declare and assign all passed parameters
+				//call run() on function
+				//popFrame
 				break;
 			case "print ( expr )":
 				nt = (NonTerminal) getAsObject("line");

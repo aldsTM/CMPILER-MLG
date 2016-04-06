@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class FuncDec extends NonTerminal {
+public class FuncDec extends NonTerminal implements Functional {
 	private ArrayList<CodeSegment> codeSegments;
 
 	public FuncDec(String pattern) {
@@ -41,7 +41,7 @@ public class FuncDec extends NonTerminal {
 						codeSegments.add(temp);
 					}
 				}
-				put("line",c);
+				put("lines",c);
 
 				break;
 			case "dataType IDENTIFIER ( ) { code }":
@@ -68,14 +68,13 @@ public class FuncDec extends NonTerminal {
 						codeSegments.add(temp);
 					}
 				}
-				put("line",c);
+				put("lines",c);
 				break;
 			default:
 		}
 	}
 
 	public void execute() {
-		System.out.println("Function declaration");
 		switch(getProdString()) {
 			case "dataType IDENTIFIER ( funcParams ) { code }":
 				break;
@@ -83,5 +82,17 @@ public class FuncDec extends NonTerminal {
 				break;
 			default:
 		}
+	}
+
+	public void run(){
+
+	}
+
+	public String[] getFuncParamTypes(){
+		return null;
+	}
+
+	public String[] getFuncParams(){
+		return null;
 	}
 }

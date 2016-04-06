@@ -220,4 +220,43 @@ public class Variable {
 	public Object[] getAsArray() {
 		return (Object[])value;
 	}
+
+	//put this in Variable.java
+	@Override
+	public String toString() {
+		String currVals = "";
+		if (type.endsWith("[]")){
+			
+			Object [] objs = getAsArray();
+			if (objs != null){
+				boolean isLongArray = false;
+				for (int i = 0; i < objs.length; i++){
+					if ((objs[i]+"").length() > 20){
+						isLongArray = true;
+					}
+				}
+				
+				for (int i = 0; i < objs.length; i++){
+					if (i > 0){
+						if (isLongArray){
+							currVals += ",\n\t\t\t\t";
+						} else {
+							currVals += ", ";
+						}
+					}
+					currVals += objs[i];
+				}
+			}
+
+		} else {
+			currVals += value.toString();
+		}
+
+		if (currVals.length() == 0){
+			return this.type();
+		} else {
+			return this.type + " - {" + currVals + "}";
+		}
+	}
+
 }

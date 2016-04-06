@@ -57,7 +57,7 @@ public class ArrIndex extends NonTerminal {
 				break;
 			case "IDENTIFIER [ arrIndex ]":
 				v = st.get(getAsString("IDENTIFIER"));
-				type = v.type();
+				type = v.type().replaceAll("\\[\\]","");
 				if (type.equalsIgnoreCase("int")){
 					nt = (NonTerminal) getAsObject("line");
 					nt.execute();
