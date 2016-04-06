@@ -230,6 +230,7 @@ public class Variable {
 			Object [] objs = getAsArray();
 			if (objs != null){
 				boolean isLongArray = false;
+
 				for (int i = 0; i < objs.length; i++){
 					if ((objs[i]+"").length() > 20){
 						isLongArray = true;
@@ -248,6 +249,8 @@ public class Variable {
 				}
 			}
 
+			currVals = "{" + currVals + "}";
+
 		} else {
 			currVals += value.toString();
 		}
@@ -255,7 +258,7 @@ public class Variable {
 		if (currVals.length() == 0){
 			return this.type();
 		} else {
-			return this.type + " - {" + currVals + "}";
+			return this.type + " - " + currVals + "";
 		}
 	}
 

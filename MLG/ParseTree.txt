@@ -380,16 +380,15 @@ main
                     |- code_segment
                       |- non_cond_code_segment
                         |- funcCall
-                          |- func1
+                          |- println
                           |- (
-                          |- funcCallParams
                           |- )
                         |- !
                     |- code
                       |- code_segment
                         |- non_cond_code_segment
                           |- funcCall
-                            |- func2
+                            |- func1
                             |- (
                             |- funcCallParams
                             |- )
@@ -398,7 +397,7 @@ main
                         |- code_segment
                           |- non_cond_code_segment
                             |- funcCall
-                              |- func3
+                              |- func2
                               |- (
                               |- funcCallParams
                               |- )
@@ -407,12 +406,21 @@ main
                           |- code_segment
                             |- non_cond_code_segment
                               |- funcCall
-                                |- func1
+                                |- func3
                                 |- (
                                 |- funcCallParams
                                 |- )
                               |- !
                           |- code
+                            |- code_segment
+                              |- non_cond_code_segment
+                                |- funcCall
+                                  |- func1
+                                  |- (
+                                  |- funcCallParams
+                                  |- )
+                                |- !
+                            |- code
   |- }
 |- funcList
   |- funcDec
@@ -458,7 +466,7 @@ main
                         |- expr4
                           |- expr5
                             |- literal2
-                              |- "x func 1 ="
+                              |- "x func 1 = "
                   |- +
                   |- expr2
                     |- expr3
@@ -468,6 +476,15 @@ main
                 |- )
               |- !
           |- code
+            |- code_segment
+              |- non_cond_code_segment
+                |- funcCall
+                  |- func3
+                  |- (
+                  |- funcCallParams
+                  |- )
+                |- !
+            |- code
     |- }
   |- funcList
     |- funcDec
@@ -523,6 +540,15 @@ main
                   |- )
                 |- !
             |- code
+              |- code_segment
+                |- non_cond_code_segment
+                  |- funcCall
+                    |- func1
+                    |- (
+                    |- funcCallParams
+                    |- )
+                  |- !
+              |- code
       |- }
     |- funcList
       |- funcDec
@@ -537,7 +563,7 @@ main
             |- non_cond_code_segment
               |- varDec
                 |- dataType
-                  |- mmr
+                  |- SAMPLETEXT
                 |- identifiers
                   |- x
               |- !
@@ -552,8 +578,8 @@ main
                       |- expr3
                         |- expr4
                           |- expr5
-                            |- literal
-                              |- 6
+                            |- literal2
+                              |- "This is the beat of my heart!"
                 |- !
             |- code
               |- code_segment
@@ -568,7 +594,7 @@ main
                             |- expr4
                               |- expr5
                                 |- literal2
-                                  |- "x func 3 ="
+                                  |- "x func 3 = "
                       |- +
                       |- expr2
                         |- expr3

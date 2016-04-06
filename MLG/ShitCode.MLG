@@ -42,6 +42,8 @@ PRESS START {
 		println(songTitles[i])!
 	}
 
+	println()!
+
 	func1()!
 	func2()!
 	func3()!
@@ -52,18 +54,20 @@ PRESS START {
 mmr func1(){
 	mmr x!
 	x = 5!
-	println("x func 1 =" + x)!
+	println("x func 1 = " + x)!
+	func3()!
 }
 
 SAMPLETEXT func2(){
 	SAMPLETEXT x!
 	x = "The fear of falling apart!"!
 	println("x func 2 = " + x)!
+	func1()!
 }
 
 mmr func3(){
-	mmr x!
-	x = 6!
-	println("x func 3 =" + x)!
+	SAMPLETEXT x!
+	x = "This is the beat of my heart!"!
+	println("x func 3 = " + x)!
 }
 

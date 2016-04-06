@@ -9,6 +9,7 @@ public class FuncDec extends NonTerminal implements Functional {
 	}
 
 	public void interpret() throws Exception {
+		FunctionTable ft = FunctionTable.instance();
 		NonTerminal nt, nt2;
 		Code c;
 		CodeSegment[] moreShit;
@@ -43,6 +44,10 @@ public class FuncDec extends NonTerminal implements Functional {
 				}
 				put("lines",c);
 
+				if (ft.register(((Token)getComponent("IDENTIFIER")).token(),(FuncDec)this)){
+					// System.out.println("nice! registered " + ((Token)getComponent("IDENTIFIER")).token());
+				}
+
 				break;
 			case "dataType IDENTIFIER ( ) { code }":
 				nt = (NonTerminal) getComponent("dataType");
@@ -69,23 +74,44 @@ public class FuncDec extends NonTerminal implements Functional {
 					}
 				}
 				put("lines",c);
+
+				if (ft.register(((Token)getComponent("IDENTIFIER")).token(),(FuncDec)this)){
+					// System.out.println("nice! registered " + ((Token)getComponent("IDENTIFIER")).token());
+				}
+				
 				break;
 			default:
 		}
 	}
 
 	public void execute() {
-		switch(getProdString()) {
-			case "dataType IDENTIFIER ( funcParams ) { code }":
-				break;
-			case "dataType IDENTIFIER ( ) { code }":
-				break;
-			default:
-		}
+
 	}
 
 	public void run(){
-
+		boolean stop = false;
+		for(CodeSegment cl: codeSegments) {
+			switch( cl.getType() ) {
+				case "return":
+					put("status","return");
+					put("lineNo",cl.getAsInt("lineNo"));
+					break;
+				default:
+					cl.execute();
+					Object status;
+					if( (status = cl.getAsObject("status")) != null ) {
+						switch(status.toString()) {
+						 	case "return":
+						 		put("status","return");
+						 		put("lineNo",cl.getAsInt("lineNo"));
+								break;
+						 }
+					}
+			}
+			if( stop ) {
+				break;
+			}
+		}
 	}
 
 	public String[] getFuncParamTypes(){
