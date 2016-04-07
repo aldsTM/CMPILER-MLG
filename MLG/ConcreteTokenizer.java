@@ -20,7 +20,7 @@ public class ConcreteTokenizer implements Tokenizer {
 			"AND","OR","NOT","ELSE","print","println","fuckTheUniverse",
 			"PRESS","START","ILLUMINATI","CONFIRMED","M","WHATCHASAY",
 			"FOR","TWENTY","CANTTOUCHTHIS","SONG","NAME","ARRAY","NEW",
-			"DICK","SIZE","INCHES"
+			"DICK","SIZE","INCHES","GGWP"
 		};
 		operators = new String[] {
 			"(","+","-","[","=","*","/","{","<","<=",">",">=","==","!=","!",

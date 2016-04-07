@@ -1,0 +1,8 @@
+PRESS START {
+	funcShit()!
+	println(x)!
+}
+
+kdr funcShit(){
+	mmr x = 5!
+}

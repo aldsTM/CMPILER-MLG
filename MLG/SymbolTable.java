@@ -76,6 +76,18 @@ public class SymbolTable {
 		}
 	}
 
+	public boolean isDeclared(String varname) {
+		ArrayList<String> varnames = new ArrayList<String>();
+		ArrayList<HashMap<String,Variable>> map = getMap();
+		for(HashMap<String,Variable> context : map ) {
+			String[] decs = context.keySet().toArray(new String[0]);
+			for(String s : decs) {
+				varnames.add(s);
+			}
+		}
+		return varnames.indexOf(varname) != -1;
+	}
+
 	public String callStack() {
 		String callStack = "CALL STACK\n";
 		for(int i = 0; i < tags.size(); i++ ) {

@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class FuncCall extends NonTerminal {
+
 	public FuncCall(String pattern) {
 		super("funcCall",pattern);
 	}
@@ -15,9 +18,11 @@ public class FuncCall extends NonTerminal {
 
 				printIndent("(");
 
-				nt = (NonTerminal) getComponent("funcCallParams");
-				propagate(nt);
-				nt.interpret();
+				FuncCallParams callParams;
+
+				callParams = (FuncCallParams) getComponent("funcCallParams");
+				propagate(callParams);
+				callParams.interpret();
 
 				printIndent(")");
 
@@ -63,13 +68,70 @@ public class FuncCall extends NonTerminal {
 				//getParams and getParamTypes
 				String[] funcParamTypes = function.getFuncParamTypes();
 				String[] funcParamNames = function.getFuncParams();
+
+				FuncCallParams callParams = (FuncCallParams) getComponent("funcCallParams");
+
+				callParams.execute();
+				String [] funcCallParamTypes;
+				Object[] funcCallParamVals;
+				if (callParams.getProdString().length() > 0){
+					funcCallParamTypes = callParams.getDataTypes();
+					funcCallParamVals = callParams.getVals();
+				} else {
+					funcCallParamTypes = null;
+					funcCallParamVals = null;
+				}
+
+				//declare and assign all passed parameters
+				boolean isValidCall = true;
+				
+				// System.out.println("CALLING: " + getAsString("IDENTIFIER"));
+				// System.out.println(funcParamTypes.length + " <= required, given => " + funcCallParamTypes.length);
+				// for (int i = 0; i < funcParamTypes.length; i++){
+				// 	System.out.println("required[" + i + "] = " + funcParamTypes[i] + " -> " + funcParamNames[i] );
+				// }
+				// for (int i = 0; i < funcCallParamTypes.length; i++){
+				// 	System.out.println("given[" + i + "] = " + funcCallParamTypes[i] + " <- " + funcCallParamVals[i] );
+				// } System.out.println();
+
+				if (funcCallParamTypes != null && funcCallParamVals != null){
+					if (funcParamTypes.length == funcCallParamTypes.length){
+						for (int i = 0; i < funcParamTypes.length; i++){
+							if (!funcParamTypes[i].equals(funcCallParamTypes[i])){
+								isValidCall = false;
+							}
+						}
+					} else {
+						isValidCall = false;
+					}
+				}
+
 				//pushFrame, pushContext
 				st.pushFrame(getAsString("IDENTIFIER"));
 				st.pushContext();
-				//declare and assign all passed parameters
 
-				//call run() on function
-				function.run();
+				if (isValidCall){
+					if (funcParamTypes != null && funcParamNames != null){
+						for (int i = 0; i < funcParamTypes.length; i++){
+							if (st.declare(funcParamNames[i],funcCallParamTypes[i])){
+								st.assign(funcParamNames[i],funcCallParamVals[i]);
+							}
+							
+						}
+					}
+					//call run() on function
+					function.run();
+					// System.out.println("function return type = " + function.getReturnType());
+					put("type",function.getReturnType());
+					Object value = function.getReturnVal();
+					put("val",value);
+					// System.out.println("function returned " + value);
+				} else {
+					System.out.println("Type checking error: Invalid " +
+										" parameters for function '" + 
+										getAsString("IDENTIFIER") + "'!");
+				}
+
 				//popFrame
 				st.popContext();
 				st.popFrame();

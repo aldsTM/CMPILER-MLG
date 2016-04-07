@@ -44,10 +44,11 @@ PRESS START {
 
 	println()!
 
-	func1()!
-	func2()!
-	func3()!
-	func1()!
+
+	mmr i = 50!
+	println("x = " + x + "; i = " + i)!
+	mmr newWave = callFuncWithParameters(x,i)!
+	println("shit " + newWave)!
 
 }
 
@@ -69,5 +70,12 @@ mmr func3(){
 	SAMPLETEXT x!
 	x = "This is the beat of my heart!"!
 	println("x func 3 = " + x)!
+}
+
+mmr callFuncWithParameters(mmr intX, mmr intI){
+	mmr x = 500!
+	println("Local variable x = " + x)!
+	println("Congrats !!!!! Your parameters are " + intX + " and " + intI)!
+	GGWP intX+intI!
 }
 

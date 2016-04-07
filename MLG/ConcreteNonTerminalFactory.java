@@ -58,6 +58,8 @@ public class ConcreteNonTerminalFactory implements NonTerminalFactory {
 				return new FuncParams(pattern);
 			case "funcCall":
 				return new FuncCall(pattern);
+			case "return":
+				return new Return(pattern);
 			case "scanf":
 				return new ScanF(pattern);
 			case "funcCallParams":

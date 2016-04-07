@@ -45,6 +45,26 @@ public class CodeSegment extends NonTerminal {
 		NonTerminal nt;
 		nt = (NonTerminal) getAsObject("line");
 		nt.execute();
+		if (getType().equalsIgnoreCase("return")){
+			put("type",nt.getAsString("type"));
+			switch(nt.getAsString("type")){
+				case "int":
+					put("val",nt.getAsInt("val"));
+					break;
+				case "float":
+					put("val",nt.getAsFloat("val"));
+					break;
+				case "char":
+					put("val",nt.getAsString("val").charAt(0));
+					break;
+				case "string":
+					put("val",nt.getAsString("val"));
+					break;
+				case "boolean":
+					put("val",nt.getAsBoolean("val"));
+					break;
+			}
+		}
 		//code.execute();
 	}
 }

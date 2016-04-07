@@ -1,0 +1,35 @@
+
+PRESS START {
+	mmr x = 0!
+	print("Enter row count: ")!
+	SMOKE WEED {
+		SONG NAME? (mmr, x)!
+		ILLUMINATI CONFIRMED ( x <= 0 ) {
+			print("Row count must be positive. Please enter again: ")!
+		}
+	} EVERYDAY (x <= 0)!
+
+	mmr hopeful = tatsulok(x)!
+	println(hopeful)!
+}
+
+mmr tatsulok (mmr x){
+	ILLUMINATI CONFIRMED (x > 0){
+		tatsulok(minusOne(x))!
+	}
+	linya(x)!
+	println()!
+
+	GGWP 69!
+}
+
+mmr minusOne(mmr x){
+	GGWP x-1!
+}
+
+mmr linya (mmr x){
+	ILLUMINATI CONFIRMED (x > 0){
+		linya(x-1)!
+		print("*")!
+	}
+}

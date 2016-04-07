@@ -63,6 +63,13 @@ public class NonCondCodeSegment extends NonTerminal {
 				nt.interpret();
 				put("line",nt);
 				break;
+			case "return !":
+				type = "return";
+				nt = (NonTerminal) getComponent("return");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
+				break;
 			case "fuckTheUniverse !":
 				type = "fuckTheUniverse !";
 				printIndent("fuckTheUniverse");
@@ -116,6 +123,26 @@ public class NonCondCodeSegment extends NonTerminal {
 			} else {
 				try {
 					nt.execute();
+					if (getType().equalsIgnoreCase("return")){
+						put("type",nt.getAsString("type"));
+						switch(nt.getAsString("type")){
+							case "int":
+								put("val",nt.getAsInt("val"));
+								break;
+							case "float":
+								put("val",nt.getAsFloat("val"));
+								break;
+							case "char":
+								put("val",nt.getAsString("val").charAt(0));
+								break;
+							case "string":
+								put("val",nt.getAsString("val"));
+								break;
+							case "boolean":
+								put("val",nt.getAsBoolean("val"));
+								break;
+						}
+					}
 				} catch (Exception e){
 					System.out.println("Runtime error: " + e.getMessage());
 				}

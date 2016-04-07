@@ -58,6 +58,11 @@ public class Expr5 extends NonTerminal {
 				printIndent("]");
 
 				break;
+			case "funcCall":
+				nt = (NonTerminal) getComponent("funcCall");
+				propagate(nt);
+				nt.interpret();
+				put("line",nt);
 			default:
 		}
 	}
@@ -132,61 +137,96 @@ public class Expr5 extends NonTerminal {
 				break;
 			case "IDENTIFIER":
 				st = SymbolTable.instance();
-				v = st.get(getAsString("IDENTIFIER"));
-				put("type",v.type());
-				switch(getAsString("type")) {
-					case "int":
-						put("val",v.getAsInt());
-						break;
-					case "float":
-						put("val",v.getAsFloat());
-						break;
-					case "char":
-						put("val",(char)v.getAsInt() + "");
-						break;
-					case "string":
-						put("val",v.getAsString());
-						break;
-					case "boolean":
-						put("val",v.getAsBoolean());
-						break;
-					case "array":
-						put("val",v.getAsArray());
-						break;
-					default:
-				}
-				break;
-			case "IDENTIFIER [ arrIndex ]":
-				st = SymbolTable.instance();
-				v = st.get(getAsString("IDENTIFIER"));
-				put("type",v.type().replaceAll("\\[\\]",""));
-
-				nt = (NonTerminal) getAsObject("line");
-				nt.execute();
-				int i = nt.getAsInt("val");
-
-				Object[] tempArray = v.getAsArray();
-				if (i < tempArray.length){
+				if (st.isDeclared(getAsString("IDENTIFIER"))){
+					v = st.get(getAsString("IDENTIFIER"));
+					put("type",v.type());
 					switch(getAsString("type")) {
 						case "int":
-							put("val",Integer.parseInt(tempArray[i].toString()));
+							put("val",v.getAsInt());
 							break;
 						case "float":
-							put("val",Float.parseFloat(tempArray[i].toString()));
+							put("val",v.getAsFloat());
 							break;
 						case "char":
-							put("val",tempArray[i].toString().charAt(0));
+							put("val",(char)v.getAsInt() + "");
 							break;
 						case "string":
-							put("val",tempArray[i].toString());
+							put("val",v.getAsString());
 							break;
 						case "boolean":
-							put("val",tempArray[i].toString().equalsIgnoreCase("true"));
+							put("val",v.getAsBoolean());
+							break;
+						case "array":
+							put("val",v.getAsArray());
 							break;
 						default:
 					}
 				} else {
-					put("val","Syntax error: Index exceeds max number of elements.");
+					System.out.println("Type checking error: Undeclared variable " 
+										+ getAsString("IDENTIFIER"));
+				}
+				break;
+			case "IDENTIFIER [ arrIndex ]":
+				st = SymbolTable.instance();
+				if (st.isDeclared(getAsString("IDENTIFIER"))){
+					v = st.get(getAsString("IDENTIFIER"));
+					put("type",v.type().replaceAll("\\[\\]",""));
+
+					nt = (NonTerminal) getAsObject("line");
+					nt.execute();
+					int i = nt.getAsInt("val");
+
+					Object[] tempArray = v.getAsArray();
+					if (i < tempArray.length){
+						switch(getAsString("type")) {
+							case "int":
+								put("val",Integer.parseInt(tempArray[i].toString()));
+								break;
+							case "float":
+								put("val",Float.parseFloat(tempArray[i].toString()));
+								break;
+							case "char":
+								put("val",tempArray[i].toString().charAt(0));
+								break;
+							case "string":
+								put("val",tempArray[i].toString());
+								break;
+							case "boolean":
+								put("val",tempArray[i].toString().equalsIgnoreCase("true"));
+								break;
+							default:
+						}
+					} else {
+						put("val","Syntax error: Index exceeds max number of elements.");
+					}
+				} else {
+					System.out.println("Type checking error: Undeclared variable " 
+										+ getAsString("IDENTIFIER"));
+				}
+				
+				break;
+			case "funcCall":
+				nt = (NonTerminal) getAsObject("line");
+				nt.execute();
+				put("type",nt.getAsString("type"));
+				put("val",nt.getAsObject("val"));
+				switch(nt.getAsString("type")){
+					case "int":
+						put("val",nt.getAsInt("val"));
+						break;
+					case "float":
+						put("val",nt.getAsFloat("val"));
+						break;
+					case "char":
+						put("val",nt.getAsString("val").charAt(0));
+						break;
+					case "string":
+						put("val",nt.getAsString("val"));
+						break;
+					case "boolean":
+						put("val",nt.getAsBoolean("val"));
+						break;
+
 				}
 				break;
 			default:
